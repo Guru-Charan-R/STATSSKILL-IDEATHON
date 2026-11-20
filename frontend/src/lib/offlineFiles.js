@@ -71,9 +71,26 @@ export function buildDocumentHtml(doc, chunks = []) {
 <pre>${escapeHtml(text)}</pre>`);
 }
 
+// RAG chunks overlap by ~120 characters; stitch them back into continuous text.
+function mergeChunks(chunks) {
+  let out = '';
+  for (const chunk of chunks) {
+    const part = String(chunk?.content ?? chunk ?? '');
+    if (!part) continue;
+    if (!out) { out = part; continue; }
+    let overlap = 0;
+    const max = Math.min(200, out.length, part.length);
+    for (let n = max; n > 0; n--) {
+      if (out.slice(-n) === part.slice(0, n)) { overlap = n; break; }
+    }
+    out += overlap ? part.slice(overlap) : `\n\n${part}`;
+  }
+  return out;
+}
+
 // Plain-text copy for the document library (no HTML markup).
 export function buildDocumentText(doc, chunks = []) {
-  const text = chunks.map(c => c.content).join('\n\n') || 'No extracted text is available for this document.';
+  const text = mergeChunks(chunks) || 'No extracted text is available for this document.';
   const header = [
     doc.title,
     doc.original_name ? `Source: ${doc.original_name}` : '',
