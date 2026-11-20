@@ -3,7 +3,7 @@ import api from '../lib/api.js';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useSettings } from '../context/SettingsContext.jsx';
 import { offlineDocuments } from '../lib/offlineStore.js';
-import { buildDocumentHtml, downloadText, safeFilename } from '../lib/offlineFiles.js';
+import { buildDocumentText, downloadText, safeFilename } from '../lib/offlineFiles.js';
 
 export default function Documents() {
   const { user } = useAuth();
@@ -56,7 +56,7 @@ export default function Documents() {
     await load();
   };
 
-  // Save the full document locally and also download a portable HTML copy.
+  // Save the full document locally and also download a plain-text (.txt) copy.
   const saveOffline = async (d) => {
     setSavingId(d.id);
     setNotice('');
@@ -77,7 +77,7 @@ export default function Documents() {
         chunks: contents,
       };
       await offlineDocuments.save(record);
-      downloadText(`${safeFilename(d.title)}.html`, buildDocumentHtml(record, contents.map(content => ({ content }))));
+      downloadText(`${safeFilename(d.title)}.txt`, buildDocumentText(record, contents.map(content => ({ content }))), 'text/plain;charset=utf-8');
       setNotice(`"${d.title}" is saved on this device and a downloadable copy was created.`);
     } catch (err) {
       setNotice('Could not save offline: ' + (err.response?.data?.error || err.message));
@@ -112,7 +112,7 @@ export default function Documents() {
                   <button
                     onClick={() => saveOffline(d)}
                     disabled={savingId === d.id}
-                    title="Save on this device and download a portable HTML copy"
+                    title="Save on this device and download a text (.txt) copy"
                     className="px-2.5 py-1 rounded-full text-[11px] font-semibold text-white bg-gradient-to-r from-cyan-600 to-teal-500 disabled:opacity-50"
                   >
                     {savingId === d.id ? 'Saving...' : 'Download / Save offline'}

@@ -71,6 +71,18 @@ export function buildDocumentHtml(doc, chunks = []) {
 <pre>${escapeHtml(text)}</pre>`);
 }
 
+// Plain-text copy for the document library (no HTML markup).
+export function buildDocumentText(doc, chunks = []) {
+  const text = chunks.map(c => c.content).join('\n\n') || 'No extracted text is available for this document.';
+  const header = [
+    doc.title,
+    doc.original_name ? `Source: ${doc.original_name}` : '',
+    doc.tags ? `Tags: ${doc.tags}` : '',
+    `Saved: ${new Date().toLocaleString()}`
+  ].filter(Boolean).join('\n');
+  return `${header}\n\n${text}\n`;
+}
+
 export function buildLessonHtml(lesson) {
   const image = lesson.thumbnailData
     ? `<img src="${lesson.thumbnailData}" alt="Lesson thumbnail">`

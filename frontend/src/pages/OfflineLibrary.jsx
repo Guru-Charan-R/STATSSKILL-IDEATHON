@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { offlineDocuments, offlineLessons } from '../lib/offlineStore.js';
-import { buildDocumentHtml, buildLessonHtml, downloadText, safeFilename } from '../lib/offlineFiles.js';
+import { buildDocumentText, buildLessonHtml, downloadText, safeFilename } from '../lib/offlineFiles.js';
 import { useSettings } from '../context/SettingsContext.jsx';
 
 export default function OfflineLibrary() {
@@ -44,7 +44,7 @@ export default function OfflineLibrary() {
 
   const redownload = (kind, item) => {
     if (kind === 'documents') {
-      downloadText(`${safeFilename(item.title)}.html`, buildDocumentHtml(item, (item.chunks || []).map(content => ({ content }))));
+      downloadText(`${safeFilename(item.title)}.txt`, buildDocumentText(item, (item.chunks || []).map(content => ({ content }))), 'text/plain;charset=utf-8');
     } else {
       downloadText(`${safeFilename(item.title)}.html`, buildLessonHtml(item));
     }
