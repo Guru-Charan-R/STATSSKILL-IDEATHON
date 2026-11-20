@@ -85,6 +85,36 @@ export const homeScripts = `
       filterCurricula();
     }
 
+    // Download a plain-text audit summary (works offline, no HTML).
+    function downloadAuditReport() {
+      const lines = [
+        'StatSkill AI - Evaluation Audit Summary',
+        'SIH26101 | Government of India - MOSPI',
+        'Generated: ' + new Date().toLocaleString(),
+        '',
+        'Evaluation audited under MoSPI Technical Advisory Group (TAG) protocols.',
+        '',
+        'Competency Scores',
+        '-----------------',
+        'CPI Hedonic Adjustments: 91.4%',
+        'Administrative Data Harmonization: 85.6%',
+        '',
+        'This is a prototype audit summary generated locally by the StatSkill AI portal.',
+        'Official records should be obtained from the MoSPI technical advisory group.'
+      ];
+      const text = lines.join('\\n');
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'StatSkill_Audit_Summary.txt';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 10000);
+      if (typeof triggerAction === 'function') triggerAction('Audit summary downloaded as a text file.');
+    }
+
     // Portal Toast Helper
     function triggerAction(message) {
       const toast = document.getElementById('portal-toast');

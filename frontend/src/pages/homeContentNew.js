@@ -388,7 +388,7 @@ export const homeHtmlNew = `
 <span class="material-symbols-outlined text-[16px] text-teal-accent">info</span>
               Evaluation audited under MoSPI Technical Advisory Group (TAG) protocols.
             </span>
-<button class="font-semibold text-on-tertiary-container hover:underline">Download Audit PDF</button>
+<button onclick="downloadAuditReport()" class="font-semibold text-on-tertiary-container hover:underline">Download Audit PDF</button>
 </div>
 </div>
 <!-- AI Diagnostic Assistant Preview (5 cols) -->

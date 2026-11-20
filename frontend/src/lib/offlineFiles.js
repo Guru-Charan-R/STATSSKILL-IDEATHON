@@ -14,16 +14,17 @@ export function safeFilename(name) {
 }
 
 export function downloadText(filename, text, mime = 'text/html;charset=utf-8') {
-  const blob = new Blob([text], { type: mime });
-  const url = URL.createObjectURL(blob);
+  // A data URL bypasses service-worker fetch interception entirely, which is
+  // the most common cause of "download does nothing" in offline-enabled apps.
+  const url = `data:${mime},${encodeURIComponent(text)}`;
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
   a.style.display = 'none';
+  a.rel = 'noopener';
   document.body.appendChild(a);
   a.click();
-  // Keep the object URL alive long enough for slower browsers to finish saving.
-  setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 10000);
+  setTimeout(() => a.remove(), 10000);
 }
 
 const STYLE = `
