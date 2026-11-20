@@ -1,0 +1,878 @@
+export const homeHtmlNew = `
+<div class="flex flex-col w-full">
+<style>
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-node {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+    .reveal-node {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 750ms cubic-bezier(0.22, 1, 0.36, 1), transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-node.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+<!-- Hero Section with Institutional Library Backdrop -->
+<section class="relative w-full overflow-hidden bg-primary-container text-on-primary">
+<div class="absolute inset-0 bg-cover bg-center pointer-events-none opacity-45 mix-blend-luminosity scale-105 transition-transform duration-1000 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJ0Iq2M4mH2q8LTMBSNmUGqimjUj2tLOc4cPUKiK9B4nD-fPJk-cXVU9nA3L_r2GHpNoS4XJ3L7JbjCfPfJt8cMVsOnmMLeHB1Mkmf-ahDYhJwjjBZg3Rzpwgyzj3svbbZR8aVOiW4QaIAaDfJI2V-lsMMxXtW-bMqtL4CWM_39O-lVXOlsJkrb6Ljvom767L961q9HLHZc7zAtMKph19LzV2LMhIGTfv8NQHCzwE');"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/85 to-primary-container/40 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-primary-container/60 pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl lg:py-24 flex flex-col justify-between gap-space-xl">
+<div class="max-w-3xl flex flex-col gap-space-md reveal-node">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-surface/15 text-teal-accent border border-teal-accent/30 font-label-sm text-label-sm tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-accent animate-pulse"></span>
+            SIH 2026 · Team Codenix · SIH26101
+          </span>
+<span class="inline-flex items-center gap-1 text-on-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+            MoSPI Aligned Framework
+          </span>
+</div>
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero tracking-tight leading-tight text-surface-pure">
+          National Statistical System Capacity Building Portal
+        </h1>
+<p class="font-body-lg text-body-lg text-surface-container max-w-2xl leading-relaxed">
+          AI-Powered Adaptive Learning &amp; Competency Evaluation for Official Statisticians across central ministries, NSSO cadres, and state statistical directorates.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-on-tertiary-container hover:bg-teal-accent text-on-primary font-label-md text-label-md rounded shadow-md transition-all hover:scale-[1.01] focus:outline-none" href="#training-matrix">
+<span>Enter Training Matrix</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-surface-pure/10 hover:bg-surface-pure/20 text-surface-pure border border-border-strong/40 font-label-md text-label-md rounded backdrop-blur-sm transition-all focus:outline-none" href="#curricula-repository">
+<span class="material-symbols-outlined text-[18px]">library_books</span>
+<span>Browse Curricula</span>
+</a>
+</div>
+</div>
+<!-- Live Statistical Telemetry Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-md border-t border-border-subtle/20 reveal-node">
+<div class="flex items-center gap-space-md p-space-md bg-surface-pure/10 backdrop-blur-md rounded border border-surface-pure/15">
+<div class="w-12 h-12 rounded bg-teal-accent/20 flex items-center justify-center text-teal-accent shrink-0">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-hero text-headline-md text-surface-pure font-semibold tabular-nums">3,840+</span>
+<span class="font-label-sm text-label-sm text-surface-container font-normal">Statistical Officers Enrolled</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-md bg-surface-pure/10 backdrop-blur-md rounded border border-surface-pure/15">
+<div class="w-12 h-12 rounded bg-secondary-fixed/20 flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[26px]">database</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-hero text-headline-md text-surface-pure font-semibold tabular-nums">142</span>
+<span class="font-label-sm text-label-sm text-surface-container font-normal">National Datasets Integrated</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-md bg-surface-pure/10 backdrop-blur-md rounded border border-surface-pure/15">
+<div class="w-12 h-12 rounded bg-teal-accent/20 flex items-center justify-center text-teal-accent shrink-0">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-hero text-headline-md text-surface-pure font-semibold tabular-nums">98.4%</span>
+<span class="font-label-sm text-label-sm text-surface-container font-normal">Competency Attainment Rate</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Body -->
+<div class="max-w-7xl mx-auto w-full px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-xl">
+<!-- Role Quick Switcher Interactive Panel -->
+<section class="bg-surface-pure rounded-lg border border-border-subtle shadow-sm p-space-lg reveal-node">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-md border-b border-border-subtle">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">badge</span>
+<h2 class="font-title-md text-title-md text-on-surface">Institutional Role Quick Switcher</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Switch role perspectives to preview tailored administrative dashboards, verification engines, and study paths.</p>
+</div>
+<div class="inline-flex p-1 bg-surface-container-low rounded border border-border-subtle" role="tablist">
+<button aria-selected="true" class="px-space-md py-1.5 rounded font-label-md text-label-md transition-all bg-surface-pure text-on-surface shadow-xs font-semibold" id="role-btn-admin" onclick="switchRole('admin')" role="tab">
+            Admin / MoSPI
+          </button>
+<button aria-selected="false" class="px-space-md py-1.5 rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface" id="role-btn-trainer" onclick="switchRole('trainer')" role="tab">
+            Trainer / Evaluator
+          </button>
+<button aria-selected="false" class="px-space-md py-1.5 rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface" id="role-btn-trainee" onclick="switchRole('trainee')" role="tab">
+            Trainee / Officer
+          </button>
+</div>
+</div>
+<!-- Tab Panels -->
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md" id="role-panel-admin">
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Cadre Accreditation</span>
+<p class="font-title-md text-title-md text-on-surface">Cadre Competency Audits</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Audit state-level statistical cadres against United Nations Statistical Commission (UNSC) guidelines.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+            Run Governance Audit <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Institutional Ledger</span>
+<p class="font-title-md text-title-md text-on-surface">Tamper-Proof Cert Ledger</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Verify cryptographically signed competency tokens issued to officers across 36 States/UTs.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold">
+            View Token Registry <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Curriculum Oversight</span>
+<p class="font-title-md text-title-md text-on-surface">Adaptive Benchmark Engine</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Deploy automated diagnostic rubrics for CPI revision, SNA 2008 re-basing, and NSS 80th round.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+            Configure Matrix Rules <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+</div>
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md hidden" id="role-panel-trainer">
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Live Evaluation</span>
+<p class="font-title-md text-title-md text-on-surface">Assessment Grading Desk</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Review subjective methodologies, survey stratifications, and sample weights formulated by trainees.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+            24 Pending Evaluations <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Interactive Sandbox</span>
+<p class="font-title-md text-title-md text-on-surface">Data Simulation Laboratory</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Spin up simulated microdata environments with deliberate non-sampling errors for real-time trainee testing.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold">
+            Launch Microdata Lab <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Cohort Diagnostics</span>
+<p class="font-title-md text-title-md text-on-surface">Methodology Mastery Analytics</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Identify aggregate conceptual bottlenecks across Multi-Stage Sampling and Hedonic Price Deflation.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+            View Analytics Matrix <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+</div>
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md hidden" id="role-panel-trainee">
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Officer Curriculum</span>
+<p class="font-title-md text-title-md text-on-surface">Assigned Capacity Modules</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Continue Module 4: Price Index Weights &amp; Chained Consumer Price Series Computation.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+            Resume Module (74% Done) <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Diagnostic Drill</span>
+<p class="font-title-md text-title-md text-on-surface">AI Adaptive Mock Viva</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Engage with StatSkill AI assistant on System of National Accounts 2008 balance sheets.</p>
+</div>
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold">
+            Start 10-Min Viva <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Accreditation</span>
+<p class="font-title-md text-title-md text-on-surface">Competency Credentials</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Download official certificates validated by National Statistical Systems Training Academy (NSSTA).</p>
+</div>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+            Access 2 Badges Earned <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+</div>
+</section>
+<!-- Core Capacity Pillars Grid -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm reveal-node">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Official Statistical Pillars</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface">Core Capacity Architecture</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">
+          Specialized curricula built in collaboration with national academies, structuring foundational surveys, macro accounts, and digital registries.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pillar 1 -->
+<div class="bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between hover:border-on-tertiary-container hover:-translate-y-1 transition-all duration-300 shadow-sm reveal-node">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-teal-surface text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Pillar 01 · Macroeconomics</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">National Accounts &amp; GDP Compilation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Comprehensive modules on Supply and Use Tables (SUT), Gross Value Added (GVA) re-basing, informal sector imputation, and SNA 2008 standards.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-subtle flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">8 Modules · 48 Hrs</span>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between hover:border-on-tertiary-container hover:-translate-y-1 transition-all duration-300 shadow-sm reveal-node" style="transition-delay: 100ms;">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">pie_chart</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Pillar 02 · Primary Surveys</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sample Survey Methodologies &amp; NSSO Standards</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Stratified multi-stage designs, primary sampling units (PSU) formulation, non-response weighting, and periodic labour force survey (PLFS) pipelines.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-subtle flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">11 Modules · 64 Hrs</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between hover:border-on-tertiary-container hover:-translate-y-1 transition-all duration-300 shadow-sm reveal-node" style="transition-delay: 200ms;">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-teal-surface text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Pillar 03 · High-Frequency</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Price Indices, CPI &amp; WPI Computation AI Engine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Automated Laspeyres and Paasche index compilation, web scraping validation for consumer markets, and quality adjustment algorithms.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-subtle flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">6 Modules · 36 Hrs</span>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between hover:border-on-tertiary-container hover:-translate-y-1 transition-all duration-300 shadow-sm reveal-node" style="transition-delay: 300ms;">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Pillar 04 · Data Modernization</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Big Data Analytics &amp; Administrative Records</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Harmonizing GSTN registers, satellite crop telemetry, and EPFO payroll indicators into official national statistical time series.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-subtle flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">9 Modules · 52 Hrs</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Live Statistical Training Matrix & Analytics -->
+<section class="flex flex-col gap-space-lg" id="training-matrix">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm reveal-node">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Executive Governance Dashboard</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface">Active Cohort Competency Matrix</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">System Status:</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-teal-surface text-on-tertiary-container border border-on-tertiary-container/40 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+            Real-Time Telemetry Sync
+          </span>
+</div>
+</div>
+<!-- Analytics Bento: Radar Visual + Live Diagnostic Assistant -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Officer Competency Progress Radar Card (7 cols) -->
+<div class="lg:col-span-7 bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between shadow-sm reveal-node">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md border-b border-border-subtle">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">National Cadre Competency Radar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Aggregated across 28 Indian Statistical Service (ISS) cohorts</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs px-2 py-1 bg-surface-container rounded font-label-sm text-on-surface">Q1 2026 Target: 92%</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg py-space-lg items-center">
+<!-- Inline SVG Spider/Radar Chart -->
+<div class="relative flex items-center justify-center">
+<svg class="w-52 h-52 text-secondary/30" viewbox="0 0 240 240">
+<!-- Background grid concentric polygons -->
+<polygon fill="none" points="120,20 215,75 215,185 120,220 25,185 25,75" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1"></polygon>
+<polygon fill="none" points="120,50 185,87 185,160 120,190 55,160 55,87" stroke="currentColor" stroke-width="1"></polygon>
+<polygon fill="none" points="120,80 155,100 155,140 120,160 85,140 85,100" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1"></polygon>
+<!-- Spokes -->
+<line stroke="currentColor" stroke-width="1" x1="120" x2="120" y1="120" y2="20"></line>
+<line stroke="currentColor" stroke-width="1" x1="120" x2="215" y1="120" y2="75"></line>
+<line stroke="currentColor" stroke-width="1" x1="120" x2="215" y1="120" y2="185"></line>
+<line stroke="currentColor" stroke-width="1" x1="120" x2="120" y1="120" y2="220"></line>
+<line stroke="currentColor" stroke-width="1" x1="120" x2="25" y1="120" y2="185"></line>
+<line stroke="currentColor" stroke-width="1" x1="120" x2="25" y1="120" y2="75"></line>
+<!-- Actual Competency Polygon Filled -->
+<polygon class="fill-teal-accent/25 stroke-on-tertiary-container" points="120,38 200,82 195,170 120,205 40,168 35,85" stroke-width="2.5"></polygon>
+<!-- Key Markers -->
+<circle class="fill-on-tertiary-container" cx="120" cy="38" r="3.5"></circle>
+<circle class="fill-on-tertiary-container" cx="200" cy="82" r="3.5"></circle>
+<circle class="fill-on-tertiary-container" cx="195" cy="170" r="3.5"></circle>
+<circle class="fill-on-tertiary-container" cx="120" cy="205" r="3.5"></circle>
+<circle class="fill-on-tertiary-container" cx="40" cy="168" r="3.5"></circle>
+<circle class="fill-on-tertiary-container" cx="35" cy="85" r="3.5"></circle>
+</svg>
+</div>
+<!-- Quantitative Progress Breakdown -->
+<div class="flex flex-col gap-space-sm justify-center">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Sampling Error Estimation</span>
+<span class="font-semibold text-on-surface">94.8%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-2 rounded-full" style="width: 94.8%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">SNA 2008 Value Added</span>
+<span class="font-semibold text-on-surface">88.2%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 88.2%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">CPI Hedonic Adjustments</span>
+<span class="font-semibold text-on-surface">91.4%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-2 rounded-full" style="width: 91.4%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Administrative Data Harmonization</span>
+<span class="font-semibold text-on-surface">85.6%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 85.6%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-canvas-slate rounded text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-teal-accent">info</span>
+              Evaluation audited under MoSPI Technical Advisory Group (TAG) protocols.
+            </span>
+<button class="font-semibold text-on-tertiary-container hover:underline">Download Audit PDF</button>
+</div>
+</div>
+<!-- AI Diagnostic Assistant Preview (5 cols) -->
+<div class="lg:col-span-5 bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between shadow-sm reveal-node" style="transition-delay: 150ms;">
+<div class="flex items-center justify-between pb-space-md border-b border-border-subtle">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-teal-surface text-on-tertiary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface">AI Diagnostic Assistant</h3>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">Fine-tuned on UNSC &amp; MoSPI Manuals</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-teal-surface text-on-tertiary-container font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<!-- Chat Simulation Transcript -->
+<div class="flex flex-col gap-3 py-space-md overflow-hidden font-body-sm text-body-sm">
+<!-- Trainee Prompt -->
+<div class="flex items-start gap-2 bg-canvas-slate p-space-sm rounded">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant shrink-0 mt-0.5">person</span>
+<p class="text-on-surface leading-snug">
+<span class="font-semibold">Officer Sharma (NSSO):</span> How is the informal sector operating surplus imputed under SNA 2008 when enterprise survey non-response exceeds 18% in urban stratum?
+              </p>
+</div>
+<!-- AI Engine Response -->
+<div class="flex items-start gap-2 bg-teal-surface/60 border border-on-tertiary-container/20 p-space-sm rounded">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container shrink-0 mt-0.5">smart_toy</span>
+<div class="flex flex-col gap-1 text-on-surface">
+<p class="font-semibold text-on-tertiary-container font-label-sm text-label-sm">StatSkill AI · Confidence Score: 99.2%</p>
+<p class="leading-relaxed">
+                  Under SNA 2008 (§25.42) and MoSPI guidelines, apply <strong class="text-on-surface">Mixed-Stratum Generalized Variance Functions (GVF)</strong> paired with GSTN portal proxy turnover records. Do not truncate outliers using standard z-scores; invoke Winsorization at the 95th percentile.
+                </p>
+</div>
+</div>
+</div>
+<!-- Interactive Input Form -->
+<form class="relative flex items-center gap-2 pt-space-xs" onsubmit="handleAiQuery(event)">
+<input class="w-full bg-canvas-slate border border-border-strong rounded px-space-md py-2.5 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-on-tertiary-container placeholder:text-outline text-ellipsis pr-10" id="ai-prompt-input" placeholder="Ask StatSkill AI on UN-SDG Metadata or System of National Accounts 2008..." type="text"/>
+<button class="absolute right-1.5 top-1/2 -translate-y-1/2 p-1.5 rounded text-on-tertiary-container hover:bg-surface-pure transition-colors" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</form>
+<div class="hidden text-xs text-on-tertiary-container mt-1 font-medium font-label-sm" id="ai-toast">Query processed against MoSPI 2026 Repository index.</div>
+</div>
+</div>
+<!-- Active Cohorts Table -->
+<div class="bg-surface-pure rounded-lg border border-border-subtle shadow-sm overflow-hidden reveal-node">
+<div class="p-space-md border-b border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Active Statistical Cadre Cohorts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live surveillance of ongoing national training programs across zonal headquarters</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-canvas-slate border border-border-subtle hover:border-border-strong rounded font-label-sm text-label-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Filter Matrix
+            </button>
+<button class="px-3 py-1.5 bg-primary-container text-on-primary rounded font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-surface-dim">
+<span class="material-symbols-outlined text-[16px]">add</span> Enroll New Cadre
+            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-canvas-slate border-b border-border-subtle font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-md">Cohort ID &amp; Division</th>
+<th class="py-3 px-space-md">Curriculum Module</th>
+<th class="py-3 px-space-md">Enrolled Officers</th>
+<th class="py-3 px-space-md">Cohort Progress</th>
+<th class="py-3 px-space-md">Assessment Avg</th>
+<th class="py-3 px-space-md text-right">Cadre Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-canvas-slate/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md">ISS-2025-NZ</span>
+<span class="text-xs text-on-surface-variant">Northern Zone (HQ New Delhi)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium">SNA 2008 &amp; GVA Reconciliation</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="tabular-nums font-medium">124 Officers</span>
+</td>
+<td class="py-3.5 px-space-md w-48">
+<div class="flex items-center gap-2">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-2 rounded-full" style="width: 86%;"></div>
+</div>
+<span class="text-xs font-semibold tabular-nums text-on-surface">86%</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-teal-surface text-on-tertiary-container font-semibold">
+                    91.4 / 100
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-canvas-slate border border-border-strong hover:bg-surface-pure text-on-surface" onclick="triggerAction('Reviewing Assessment for ISS-2025-NZ')">
+                      Review Assessment
+                    </button>
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="triggerAction('Certificate Verified &amp; Ready for ISS-2025-NZ')">
+                      Issue Certificate
+                    </button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-canvas-slate/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md">NSSO-FOD-SZ</span>
+<span class="text-xs text-on-surface-variant">Southern Zone (Field Operations)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium">PLFS 80th Round Multi-Stage Weighting</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="tabular-nums font-medium">210 Field Envoys</span>
+</td>
+<td class="py-3.5 px-space-md w-48">
+<div class="flex items-center gap-2">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 94%;"></div>
+</div>
+<span class="text-xs font-semibold tabular-nums text-on-surface">94%</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-teal-surface text-on-tertiary-container font-semibold">
+                    95.2 / 100
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-canvas-slate border border-border-strong hover:bg-surface-pure text-on-surface" onclick="triggerAction('Reviewing Assessment for NSSO-FOD-SZ')">
+                      Review Assessment
+                    </button>
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="triggerAction('All Certificates Dispatched for NSSO-FOD-SZ')">
+                      Issue Certificate
+                    </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-canvas-slate/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md">DES-STATE-WZ</span>
+<span class="text-xs text-on-surface-variant">Western Directorate of Economics</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium">CPI Urban/Rural Basket Price Re-basing</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="tabular-nums font-medium">88 Analysts</span>
+</td>
+<td class="py-3.5 px-space-md w-48">
+<div class="flex items-center gap-2">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-2 rounded-full" style="width: 72%;"></div>
+</div>
+<span class="text-xs font-semibold tabular-nums text-on-surface">72%</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-semibold">
+                    84.0 / 100
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-canvas-slate border border-border-strong hover:bg-surface-pure text-on-surface" onclick="triggerAction('Reviewing Assessment for DES-STATE-WZ')">
+                      Review Assessment
+                    </button>
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-surface-container text-on-surface-variant cursor-not-allowed" disabled="">
+                      Pending Score
+                    </button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-canvas-slate/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md">EPFO-GSTN-AI</span>
+<span class="text-xs text-on-surface-variant">Administrative Data Integration Wing</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium">Big Data High-Frequency Employment Indices</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="tabular-nums font-medium">65 Data Engineers</span>
+</td>
+<td class="py-3.5 px-space-md w-48">
+<div class="flex items-center gap-2">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-2 rounded-full" style="width: 98%;"></div>
+</div>
+<span class="text-xs font-semibold tabular-nums text-on-surface">98%</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-teal-surface text-on-tertiary-container font-semibold">
+                    97.8 / 100
+                  </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="inline-flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-canvas-slate border border-border-strong hover:bg-surface-pure text-on-surface" onclick="triggerAction('Reviewing Assessment for EPFO-GSTN-AI')">
+                      Review Assessment
+                    </button>
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="triggerAction('Certificates Issued to 65 Engineers')">
+                      Issue Certificate
+                    </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Curricula Interactive Search & Filter Repository -->
+<section class="flex flex-col gap-space-lg" id="curricula-repository">
+<div class="flex flex-col gap-1 reveal-node">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Official Curricular Syllabus</span>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface">Search &amp; Filter Capacity Frameworks</h2>
+</div>
+<!-- Filter Controls Bar -->
+<div class="bg-surface-pure rounded-lg border border-border-subtle p-space-md shadow-sm flex flex-col md:flex-row items-center gap-space-md reveal-node">
+<div class="relative w-full md:w-2/5">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-canvas-slate border border-border-strong rounded pl-10 pr-4 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-on-tertiary-container" id="curricula-search" oninput="filterCurricula()" placeholder="Search by topic, keyword, or statistical standard..." type="text"/>
+</div>
+<div class="w-full md:w-1/5">
+<select class="w-full bg-canvas-slate border border-border-strong rounded px-3 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-on-tertiary-container" id="filter-cadre" onchange="filterCurricula()">
+<option value="all">Cadre: All Levels</option>
+<option value="senior">Senior ISS Officers</option>
+<option value="field">Field Statistical Envoys</option>
+<option value="analyst">DES State Analysts</option>
+</select>
+</div>
+<div class="w-full md:w-1/5">
+<select class="w-full bg-canvas-slate border border-border-strong rounded px-3 py-2 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-on-tertiary-container" id="filter-methodology" onchange="filterCurricula()">
+<option value="all">Methodology: All Types</option>
+<option value="macro">Macro Accounts (SNA)</option>
+<option value="sampling">Survey Sampling</option>
+<option value="prices">Price Statistics</option>
+<option value="bigdata">Big Data &amp; AI</option>
+</select>
+</div>
+<div class="w-full md:w-1/5 flex items-center justify-end">
+<button class="w-full py-2 px-4 rounded border border-border-strong text-on-surface hover:bg-canvas-slate font-label-sm text-label-sm font-semibold transition-colors" onclick="resetFilters()">
+            Reset Filters
+          </button>
+</div>
+</div>
+<!-- Curricula Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="curricula-grid">
+<!-- Item 1 -->
+<div class="curricula-card bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between hover:border-on-tertiary-container shadow-sm transition-all reveal-node" data-cadre="senior" data-method="macro">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-teal-surface text-on-tertiary-container font-semibold">Senior ISS</span>
+<span class="text-xs text-on-surface-variant font-label-sm">SNA-2008-01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">SUT Balancing &amp; Input-Output Matrices</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mathematical reconciliation of commodity flows across domestic production, intermediate consumption, and final household expenditures.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-subtle flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MoSPI Guidelines § 4.2</span>
+<button class="px-3 py-1 bg-primary-container text-on-primary rounded font-label-sm text-label-sm hover:bg-surface-dim" onclick="triggerAction('Enrolled in SUT Balancing module')">
+              Study Syllabus
+            </button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="curricula-card bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between hover:border-on-tertiary-container shadow-sm transition-all reveal-node" data-cadre="field" data-method="sampling" style="transition-delay: 100ms;">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-secondary-container font-semibold">Field Cadre</span>
+<span class="text-xs text-on-surface-variant font-label-sm">SMP-NSS-03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">CAPI Digital Enumeration &amp; Field Telemetry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Field tablet data validation protocols, automated logical skips, geo-tagged polygon audits, and real-time supervisory checks.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-subtle flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">NSSO Standards Ver. 7</span>
+<button class="px-3 py-1 bg-primary-container text-on-primary rounded font-label-sm text-label-sm hover:bg-surface-dim" onclick="triggerAction('Enrolled in CAPI Enumeration module')">
+              Study Syllabus
+            </button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="curricula-card bg-surface-pure rounded-lg border border-border-subtle p-space-lg flex flex-col justify-between hover:border-on-tertiary-container shadow-sm transition-all reveal-node" data-cadre="analyst" data-method="prices" style="transition-delay: 200ms;">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-teal-surface text-on-tertiary-container font-semibold">DES Analyst</span>
+<span class="text-xs text-on-surface-variant font-label-sm">PRC-CPI-08</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Consumer Price Index Rural/Urban Re-basing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Base year revision methods, item specification changes, housing index rent imputation, and aggregation via modified geometric mean formulas.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-subtle flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Technical Advisory TAG</span>
+<button class="px-3 py-1 bg-primary-container text-on-primary rounded font-label-sm text-label-sm hover:bg-surface-dim" onclick="triggerAction('Enrolled in CPI Re-basing module')">
+              Study Syllabus
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Knowledge Repository & Institutional Standards -->
+<section class="bg-surface-pure rounded-lg border border-border-subtle p-space-lg shadow-sm reveal-node">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-lg border-b border-border-subtle">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Institutional Repository</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Standards, Gazettes &amp; Official Guidelines</h2>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-on-tertiary-container hover:underline" href="#">
+          View Complete 1,200+ Repository Index <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-lg">
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary text-[28px]">menu_book</span>
+<h4 class="font-title-md text-title-md text-on-surface">National System of Accounts Manual 2026</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Central Statistics Office codification of asset classifications, FISIM calculations, and government final expenditure standards.
+            </p>
+</div>
+<div class="pt-3 mt-3 border-t border-border-subtle flex items-center justify-between text-xs text-on-surface-variant">
+<span>MoSPI PDF (18.4 MB)</span>
+<span class="font-semibold text-on-tertiary-container hover:underline cursor-pointer">Download</span>
+</div>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-on-tertiary-container text-[28px]">policy</span>
+<h4 class="font-title-md text-title-md text-on-surface">UNSC Fundamental Principles of Official Statistics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              General Assembly Resolution 68/261 adherence mandate covering professional independence, confidentiality, and institutional transparency.
+            </p>
+</div>
+<div class="pt-3 mt-3 border-t border-border-subtle flex items-center justify-between text-xs text-on-surface-variant">
+<span>UN StatCom (4.2 MB)</span>
+<span class="font-semibold text-on-tertiary-container hover:underline cursor-pointer">Download</span>
+</div>
+</div>
+<div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary text-[28px]">security</span>
+<h4 class="font-title-md text-title-md text-on-surface">Collection of Statistics Act &amp; Privacy Protocols</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Statutory legal framework governing microdata access restrictions, respondent identity anonymization, and secure enclave procedures.
+            </p>
+</div>
+<div class="pt-3 mt-3 border-t border-border-subtle flex items-center justify-between text-xs text-on-surface-variant">
+<span>Gazette Act (2.8 MB)</span>
+<span class="font-semibold text-on-tertiary-container hover:underline cursor-pointer">Download</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Micro-interaction / Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 ease-out bg-primary-container text-on-primary px-space-md py-3 rounded shadow-lg border border-border-strong flex items-center gap-2" id="portal-toast">
+<span class="material-symbols-outlined text-teal-accent text-[20px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-medium" id="portal-toast-msg">Notification triggered</span>
+</div>
+<!-- Interactive Logic & Intersection Observer Scripts -->
+<script>
+    // Scroll-triggered Reveal Animations via IntersectionObserver
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.reveal-node').forEach(node => {
+        observer.observe(node);
+      });
+    });
+
+    // Role Switcher Tab Logic
+    function switchRole(role) {
+      const roles = ['admin', 'trainer', 'trainee'];
+      roles.forEach(r => {
+        const btn = document.getElementById(\`role-btn-\${r}\`);
+        const panel = document.getElementById(\`role-panel-\${r}\`);
+        if (r === role) {
+          btn.classList.add('bg-surface-pure', 'text-on-surface', 'shadow-xs', 'font-semibold');
+          btn.classList.remove('text-on-surface-variant');
+          btn.setAttribute('aria-selected', 'true');
+          panel.classList.remove('hidden');
+        } else {
+          btn.classList.remove('bg-surface-pure', 'text-on-surface', 'shadow-xs', 'font-semibold');
+          btn.classList.add('text-on-surface-variant');
+          btn.setAttribute('aria-selected', 'false');
+          panel.classList.add('hidden');
+        }
+      });
+    }
+
+    // AI Query handler micro-interaction
+    function handleAiQuery(e) {
+      e.preventDefault();
+      const input = document.getElementById('ai-prompt-input');
+      const toast = document.getElementById('ai-toast');
+      if (input.value.trim() !== '') {
+        toast.classList.remove('hidden');
+        toast.innerText = \`StatSkill AI: Synthesizing analytical memorandum for "\${input.value.slice(0, 38)}..."\`;
+        input.value = '';
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 5000);
+      }
+    }
+
+    // Curricula Search and Filter Engine
+    function filterCurricula() {
+      const search = document.getElementById('curricula-search').value.toLowerCase();
+      const cadre = document.getElementById('filter-cadre').value;
+      const method = document.getElementById('filter-methodology').value;
+      const cards = document.querySelectorAll('.curricula-card');
+
+      cards.forEach(card => {
+        const cardCadre = card.getAttribute('data-cadre');
+        const cardMethod = card.getAttribute('data-method');
+        const cardText = card.innerText.toLowerCase();
+
+        const matchesSearch = search === '' || cardText.includes(search);
+        const matchesCadre = cadre === 'all' || cardCadre === cadre;
+        const matchesMethod = method === 'all' || cardMethod === method;
+
+        if (matchesSearch && matchesCadre && matchesMethod) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function resetFilters() {
+      document.getElementById('curricula-search').value = '';
+      document.getElementById('filter-cadre').value = 'all';
+      document.getElementById('filter-methodology').value = 'all';
+      filterCurricula();
+    }
+
+    // Portal Toast Helper
+    function triggerAction(message) {
+      const toast = document.getElementById('portal-toast');
+      const toastMsg = document.getElementById('portal-toast-msg');
+      toastMsg.innerText = message;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+  </script>
+</div>
+`;

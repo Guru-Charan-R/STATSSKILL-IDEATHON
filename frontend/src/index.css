@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "./theme_vars.css";
+
+@theme {
+  --color-brand-teal: #0097a7;
+  --color-brand-cyan: #00a3c4;
+  --color-brand-navy: #0b1d33;
+  --color-brand-darkcard: #08253d;
+  --color-brand-surface: #f8fafc;
+  --color-brand-accent: #0284c7;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  background-color: #f7f9fb;
+  overflow-x: hidden;
+}
+
+.hero-glow-bg {
+  background: radial-gradient(circle at 80% 20%, rgba(186, 230, 253, 0.35) 0%, rgba(240, 249, 255, 0) 50%),
+              radial-gradient(circle at 15% 15%, rgba(207, 250, 254, 0.4) 0%, rgba(247, 250, 255, 0) 45%);
+}
+
+.card-soft-shadow {
+  box-shadow: 0 10px 30px -5px rgba(203, 213, 225, 0.45), 0 4px 6px -4px rgba(203, 213, 225, 0.2);
+}
+
+.photo-fade-left {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 10%, black 22%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 10%, black 22%, black 100%);
+}
+
+.font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.dark body { background-color: #0f172a; color: #e2e8f0; }
+.dark { background-color: #0f172a; color: #e2e8f0; }
+.dark .bg-white { background-color: #1e293b; }
+.dark .bg-slate-50 { background-color: #1e293b; }
+.dark .bg-slate-100 { background-color: #334155; }
+.dark .bg-white\/90 { background-color: rgba(30,41,59,0.92); }
+.dark .text-slate-900, .dark .text-slate-950 { color: #f1f5f9; }
+.dark .text-slate-800 { color: #e2e8f0; }
+.dark .text-slate-700 { color: #cbd5e1; }
+.dark .text-slate-600 { color: #94a3b8; }
+.dark .text-slate-500 { color: #64748b; }
+.dark .border-slate-200, .dark .border-slate-100 { border-color: #334155; }
+.dark .card-soft-shadow { box-shadow: 0 10px 30px -5px rgba(0,0,0,0.5); }
+.dark input, .dark select, .dark textarea { background-color: #1e293b; color: #e2e8f0; border-color: #334155; }
+
+/* Refined editorial typography: serif for large headings */
+h1, h2 { font-family: 'Playfair Display', 'Plus Jakarta Sans', serif; }
+.font-display { font-family: 'Playfair Display', 'Plus Jakarta Sans', serif; }
+
+/* Background photography atmosphere */
+body {
+  background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(247, 249, 251, 0.88);
+  z-index: -1;
+  pointer-events: none;
+}
+.dark body::before { background: rgba(15, 23, 42, 0.85); }
+
+/* Premium scroll-reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 750ms cubic-bezier(0.22, 1, 0.36, 1), transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Design-specific reveal nodes */
+.reveal-node {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 750ms cubic-bezier(0.22, 1, 0.36, 1), transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal-node.revealed { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-node { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* Remove old photo overlay so new design colours show cleanly */
+body::before { display: none; }
+body { background-image: none; }
+
+/* ---- Dark mode readability fixes ----
+   The design uses light tokens (surface-pure / surface-container) as text
+   colours on the dark hero. In dark mode those tokens flip to dark values,
+   making text invisible. Force readable light text on dark surfaces. */
+.dark .text-surface-pure { color: #f8fafc !important; }
+.dark .text-surface-container { color: #dbeafe !important; }
+.dark .text-on-primary { color: #d4e4fa !important; }
+.dark .text-on-primary-container { color: #a7f3d0 !important; }
+.dark .text-secondary-fixed { color: #bae6fd !important; }
+.dark .text-on-tertiary-container { color: #5eead4 !important; }
+.dark .text-teal-accent { color: #2dd4bf !important; }
+
+/* Dark-mode dashboards: keep slate utilities legible */
+.dark .text-slate-700, .dark .text-slate-600, .dark .text-slate-500, .dark .text-slate-400 { color: #cbd5e1 !important; }
+.dark .text-slate-900, .dark .text-slate-950 { color: #f1f5f9 !important; }
+.dark .bg-white { background-color: #0f1c31 !important; }
+.dark .bg-slate-50 { background-color: #0b172a !important; }
+.dark .bg-slate-100 { background-color: #162742 !important; }
+.dark .border-slate-100, .dark .border-slate-200 { border-color: #1e2f49 !important; }
+.dark .text-cyan-600, .dark .text-cyan-700 { color: #2dd4bf !important; }
+.dark .bg-cyan-50, .dark .bg-teal-50 { background-color: #0c2830 !important; }
+.dark .text-rose-600 { color: #fda4af !important; }
+
+/* Remove the blue photographic hero banner (no flyer) */
+section.bg-primary-container > div[style*="background-image"],
+section.bg-primary-container > div.bg-gradient-to-r,
+section.bg-primary-container > div.bg-gradient-to-t { display: none !important; }
+section.bg-primary-container { background: linear-gradient(135deg, #0b1c30 0%, #112a38 100%) !important; }
+.dark section.bg-primary-container { background: linear-gradient(135deg, #0a1424 0%, #153352 100%) !important; }
+
+/* Hide scrollbar on the horizontally scrollable nav (keeps layout clean) */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

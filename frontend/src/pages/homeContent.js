@@ -1,0 +1,1146 @@
+export const homeHtml = `
+
+<!-- BEGIN: HeroSection (Balanced 50/50 Split Layout with Editorial Photography) -->
+<section class="relative pt-6 pb-12 lg:pt-10 lg:pb-14 overflow-hidden" data-purpose="hero-section" id="hero">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- LEFT: Refined Headline, Body & Metrics -->
+<div class="lg:col-span-6 space-y-5 z-10">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-xs text-xs font-semibold text-slate-700">
+<span class="h-2 w-2 rounded-full bg-teal-500 inline-block animate-pulse"></span>
+<span class="text-[11px]">Smart India Hackathon · SIH26101 Prototype</span>
+</div>
+<h1 class="text-3xl sm:text-4xl lg:text-[44px] leading-tight font-extrabold tracking-tight text-slate-950 font-['Plus_Jakarta_Sans',sans-serif]">
+          Statistics training,<br/>
+<span class="text-cyan-600">intelligently personal.</span>
+</h1>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-lg">
+          StatSkill AI maps every statistical officer's competencies, closes gaps with an adaptive AI curriculum, and verifies readiness for national surveys &amp; macroeconomic reporting.
+        </p>
+<div class="pt-1 flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-cyan-600 to-teal-500 hover:from-cyan-500 hover:to-teal-400 shadow-md shadow-cyan-600/20 transition duration-150" href="/login">
+<span>Launch demo</span>
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<a class="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-full text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition duration-150 shadow-xs" href="#features">
+<svg class="w-3.5 h-3.5 text-slate-800 fill-slate-800" viewbox="0 0 24 24">
+<polygon points="5 3 19 12 5 21 5 3"></polygon>
+</svg>
+<span>Explore features</span>
+</a>
+</div>
+<!-- Metric Strip -->
+<div class="pt-5 border-t border-slate-200/70 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div>
+<div class="text-2xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans',sans-serif]">8</div>
+<div class="text-[11px] font-medium text-slate-500 mt-0.5">Core competencies</div>
+</div>
+<div>
+<div class="text-2xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans',sans-serif]">120+</div>
+<div class="text-[11px] font-medium text-slate-500 mt-0.5">Micro-modules</div>
+</div>
+<div>
+<div class="text-2xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans',sans-serif]">3</div>
+<div class="text-[11px] font-medium text-slate-500 mt-0.5">Role dashboards</div>
+</div>
+<div>
+<div class="text-2xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans',sans-serif]">99.4%</div>
+<div class="text-[11px] font-medium text-slate-500 mt-0.5">Formula concordance</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: Authentic Statistical Microdata & Analytics Visualizer (NO PEOPLE) -->
+<div class="lg:col-span-6 relative mt-4 lg:mt-0">
+<div class="relative rounded-3xl p-5 sm:p-6 bg-slate-900 text-white shadow-xl border border-slate-800 card-soft-shadow overflow-hidden">
+<!-- Atmospheric telemetry grid background -->
+<div class="absolute inset-0 bg-gradient-to-tr from-cyan-950/90 via-slate-900 to-[#041928] opacity-90"></div>
+<!-- Top Bar Telemetry -->
+<div class="relative z-10 flex items-center justify-between border-b border-slate-700/60 pb-3 mb-4 text-xs">
+<div class="flex items-center space-x-2">
+<span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="font-mono font-semibold text-slate-200 text-[11px]">MoSPI NSS Microdata Engine · 80th Round</span>
+</div>
+<div class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] border border-emerald-500/30 font-semibold">
+              99.4% Precision Concordance
+            </div>
+</div>
+<!-- Statistical Gaussian Distribution & Multi-Stage Sampling Vectors -->
+<div class="relative z-10 space-y-4">
+<div class="bg-slate-950/60 rounded-2xl p-4 border border-slate-800/80">
+<div class="flex justify-between items-center mb-2 text-xs">
+<span class="text-slate-300 font-medium">PLFS Stratum Sampling Distribution &amp; Confidence Band</span>
+<span class="text-cyan-400 font-mono text-[10px]">σ = 0.014 | CI 95%</span>
+</div>
+<!-- SVG Bell Curve & Stratum Bars -->
+<svg class="w-full h-32 text-cyan-400 overflow-visible" fill="none" viewbox="0 0 400 120">
+<defs>
+<lineargradient id="gradCurve" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#0891b2" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Reference Grid Lines -->
+<line stroke="#334155" stroke-width="1" x1="20" x2="380" y1="100" y2="100"></line>
+<line stroke="#1e293b" stroke-dasharray="4" stroke-width="1" x1="20" x2="380" y1="60" y2="60"></line>
+<line stroke="#38bdf8" stroke-dasharray="2" stroke-width="1" x1="200" x2="200" y1="20" y2="100"></line>
+<!-- Area Fill -->
+<path d="M 30 100 Q 120 100 160 55 Q 200 12 240 55 Q 280 100 370 100 Z" fill="url(#gradCurve)"></path>
+<!-- Main Curve Line -->
+<path d="M 30 100 Q 120 100 160 55 Q 200 12 240 55 Q 280 100 370 100" stroke="#22d3ee" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Outlier Points -->
+<circle cx="200" cy="22" fill="#38bdf8" r="3.5"></circle>
+<circle cx="160" cy="55" fill="#2dd4bf" r="2.5"></circle>
+<circle cx="240" cy="55" fill="#2dd4bf" r="2.5"></circle>
+</svg>
+</div>
+<!-- Mini Data Metrics Grid -->
+<div class="grid grid-cols-3 gap-2.5 text-center text-xs">
+<div class="bg-slate-950/50 p-2.5 rounded-xl border border-slate-800/80">
+<div class="text-slate-400 text-[10px]">Sample Size (PSUs)</div>
+<div class="text-white font-mono font-bold text-sm mt-0.5">12,680</div>
+</div>
+<div class="bg-slate-950/50 p-2.5 rounded-xl border border-slate-800/80">
+<div class="text-slate-400 text-[10px]">Multiplier Factor</div>
+<div class="text-cyan-300 font-mono font-bold text-sm mt-0.5">1.0423</div>
+</div>
+<div class="bg-slate-950/50 p-2.5 rounded-xl border border-slate-800/80">
+<div class="text-slate-400 text-[10px]">Outlier Pruning</div>
+<div class="text-emerald-400 font-mono font-bold text-sm mt-0.5">0.02%</div>
+</div>
+</div>
+</div>
+<!-- Bottom Status Chips -->
+<div class="relative z-10 mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+<div class="flex items-center space-x-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+<span>Cluster Stratification Verified</span>
+</div>
+<span class="font-mono text-cyan-400">NSSO Standard v4.2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: RolesSection -->
+<section class="py-20 bg-slate-50/60 border-t border-slate-100 relative" data-purpose="roles-section" id="roles">
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0"><div class="absolute inset-0 bg-[radial-gradient(#0284c7_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none"></div></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Header Group -->
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="text-xs font-bold text-cyan-600 tracking-widest uppercase block mb-2 font-['Plus_Jakarta_Sans',sans-serif]">THREE TAILORED EXPERIENCES</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans',sans-serif]">One platform. Every role.</h2>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Admin -->
+<div class="bg-white rounded-3xl p-8 border border-slate-100 card-soft-shadow flex flex-col justify-between" data-purpose="role-card-admin" style="background: rgba(255, 255, 255, 0.90); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(220, 230, 245, 0.85); box-shadow: 0 16px 36px rgba(15, 35, 70, 0.08);">
+<div>
+<div class="flex items-center space-x-3 mb-6">
+<div class="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif]">Admin</h3>
+</div>
+<!-- List Points -->
+<ul class="space-y-4 mb-8 text-sm text-slate-600">
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>User management</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Content governance</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Platform analytics</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Exportable reports</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-3 rounded-full text-center text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200 transition" href="#admin">
+          Explore as Admin
+        </a>
+</div>
+<!-- Card 2: Trainer -->
+<div class="bg-white rounded-3xl p-8 border border-slate-100 card-soft-shadow flex flex-col justify-between" data-purpose="role-card-trainer" style="background: rgba(255, 255, 255, 0.90); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(220, 230, 245, 0.85); box-shadow: 0 16px 36px rgba(15, 35, 70, 0.08);">
+<div>
+<div class="flex items-center space-x-3 mb-6">
+<div class="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif]">Trainer</h3>
+</div>
+<!-- List Points -->
+<ul class="space-y-4 mb-8 text-sm text-slate-600">
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Upload materials</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Visual quiz builder</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Trainee monitoring</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Gap insights per batch</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-3 rounded-full text-center text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200 transition" href="#trainer">
+          Explore as Trainer
+        </a>
+</div>
+<!-- Card 3: Trainee -->
+<div class="bg-white rounded-3xl p-8 border border-slate-100 card-soft-shadow flex flex-col justify-between" data-purpose="role-card-trainee" style="background: rgba(255, 255, 255, 0.90); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(220, 230, 245, 0.85); box-shadow: 0 16px 36px rgba(15, 35, 70, 0.08);">
+<div>
+<div class="flex items-center space-x-3 mb-6">
+<div class="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif]">Trainee</h3>
+</div>
+<!-- List Points -->
+<ul class="space-y-4 mb-8 text-sm text-slate-600">
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Gap analysis &amp; readiness</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>AI tutor &amp; courses</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Quizzes with scoring</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="flex-shrink-0 w-4 h-4 rounded-full border border-teal-500 text-teal-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>Offline learning</span>
+</li>
+</ul>
+</div>
+<a class="w-full py-3 rounded-full text-center text-sm font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200 transition" href="#trainee">
+          Explore as Trainee
+        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RolesSection -->
+<!-- BEGIN: TaskReadinessSection -->
+<section class="py-20 lg:py-24" data-purpose="task-readiness-banner" id="task-readiness">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Deep Cyan-Navy Container -->
+<div class="relative bg-gradient-to-br from-[#062439] via-[#082a43] to-[#041928] rounded-[36px] p-8 sm:p-12 lg:p-16 overflow-hidden border border-cyan-900/40 shadow-2xl">
+<div class="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden"><div class="absolute inset-0 bg-gradient-to-r from-[#062439] via-[#082a43] to-[#041928]"></div><div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:20px_20px]"></div></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Info Block -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Unique Badge -->
+<div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-cyan-950/90 border border-cyan-700/60 text-xs font-semibold text-cyan-300">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Unique to StatSkill</span>
+</div>
+<h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight font-['Plus_Jakarta_Sans',sans-serif]">
+            Task Readiness Analysis
+          </h2>
+<p class="text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
+            Choose a real assignment — compiling CPI, running a PLFS round, estimating district GDP. StatSkill scores your readiness, pinpoints the exact skill gaps and builds the shortest path to close them.
+          </p>
+<!-- Checkpoints -->
+<div class="space-y-3 pt-2 text-sm sm:text-base text-slate-200">
+<div class="flex items-center space-x-3">
+<div class="w-5 h-5 rounded-full border border-teal-400 text-teal-400 flex items-center justify-center text-xs">✓</div>
+<span>Readiness score per task</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-5 h-5 rounded-full border border-teal-400 text-teal-400 flex items-center justify-center text-xs">✓</div>
+<span>Ranked skill gaps with required levels</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-5 h-5 rounded-full border border-teal-400 text-teal-400 flex items-center justify-center text-xs">✓</div>
+<span>AI-recommended courses &amp; quizzes</span>
+</div>
+</div>
+<!-- Button -->
+<div class="pt-4">
+<a class="inline-flex items-center space-x-2 px-6 py-3.5 rounded-full text-sm font-semibold text-slate-900 bg-cyan-400 hover:bg-cyan-300 transition duration-150" href="#readiness">
+<span>Check your readiness</span>
+<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Right Interactive Task Cards -->
+<div class="lg:col-span-6 space-y-4">
+<!-- Task Card 1 -->
+<div class="bg-[#0c2f49]/80 backdrop-blur-sm border border-cyan-800/40 rounded-2xl p-5 hover:border-cyan-500/50 transition">
+<div class="flex justify-between items-center mb-3">
+<h4 class="text-base font-semibold text-white">Conduct a PLFS field round</h4>
+<span class="text-xl font-bold text-cyan-400">89%</span>
+</div>
+<div class="w-full h-2 bg-slate-800/80 rounded-full overflow-hidden mb-2">
+<div class="h-full bg-cyan-400 rounded-full" style="width: 89%"></div>
+</div>
+<div class="text-xs text-slate-400 font-medium">Almost ready</div>
+</div>
+<!-- Task Card 2 -->
+<div class="bg-[#0c2f49]/80 backdrop-blur-sm border border-cyan-800/40 rounded-2xl p-5 hover:border-cyan-500/50 transition">
+<div class="flex justify-between items-center mb-3">
+<h4 class="text-base font-semibold text-white">Compile monthly CPI for a state</h4>
+<span class="text-xl font-bold text-cyan-400">76%</span>
+</div>
+<div class="w-full h-2 bg-slate-800/80 rounded-full overflow-hidden mb-2">
+<div class="h-full bg-cyan-400 rounded-full" style="width: 76%"></div>
+</div>
+<div class="text-xs text-slate-400 font-medium">Almost ready</div>
+</div>
+<!-- Task Card 3 -->
+<div class="bg-[#0c2f49]/80 backdrop-blur-sm border border-cyan-800/40 rounded-2xl p-5 hover:border-cyan-500/50 transition">
+<div class="flex justify-between items-center mb-3">
+<h4 class="text-base font-semibold text-white">Estimate District Domestic Product</h4>
+<span class="text-xl font-bold text-cyan-400">68%</span>
+</div>
+<div class="w-full h-2 bg-slate-800/80 rounded-full overflow-hidden mb-2">
+<div class="h-full bg-cyan-400 rounded-full" style="width: 68%"></div>
+</div>
+<div class="text-xs text-slate-400 font-medium">Needs training</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TaskReadinessSection -->
+<!-- BEGIN: NEW SECTION 1 – THE PROBLEM & OUR SOLUTION -->
+<section class="py-20 bg-slate-50/70 border-t border-slate-200/80 relative" data-purpose="problem-solution-section" id="problem-solution">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-14">
+<span class="text-xs font-bold text-cyan-600 tracking-widest uppercase block mb-2 font-['Plus_Jakarta_Sans',sans-serif]">NATIONAL CAPACITY CHALLENGE &amp; ARCHITECTURE</span>
+<h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight leading-tight font-['Plus_Jakarta_Sans',sans-serif]">
+      Bridging the Competency Gap in India's Statistical Workforce
+    </h2>
+<p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-4">
+      Different government statistical employees across state directorates and central ministries possess varied skill levels. Identifying specific individual competency gaps has historically been difficult, uniform one-size-fits-all training fails to address specialized field and analytical needs, manual assessment authoring from dense official manuals (NSSO, MoSPI, SNA) is slow and labor-intensive, and measuring verified empirical improvement post-training has lacked real-time visibility.
+    </p>
+</div>
+<!-- 4 Core Challenges Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 font-bold flex items-center justify-center mb-4 text-xs font-mono border border-amber-200/60">
+          01
+        </div>
+<h3 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Identifying Skill Gaps</h3>
+<p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+          Granular diagnosis across multi-stage survey methods, national accounts, and price index compilation previously relied on subjective self-reporting.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] font-semibold text-amber-700">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2"></span>
+        Diagnostic opacity
+      </div>
+</div>
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 font-bold flex items-center justify-center mb-4 text-xs font-mono border border-rose-200/60">
+          02
+        </div>
+<h3 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Finding Suitable Training</h3>
+<p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+          Eliminating curriculum mismatch with targeted micro-modules rather than forcing senior supervisors and field enumerators through identical generic lecture cycles.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] font-semibold text-rose-700">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500 mr-2"></span>
+        Curriculum mismatch
+      </div>
+</div>
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-700 font-bold flex items-center justify-center mb-4 text-xs font-mono border border-cyan-200/60">
+          03
+        </div>
+<h3 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Creating Assessments</h3>
+<p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+          Automating manual-grounded quiz generation from official circulars, avoiding months of manual authoring across hundreds of schedules and statistical gazettes.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] font-semibold text-cyan-700">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-600 mr-2"></span>
+        Labor-heavy authoring
+      </div>
+</div>
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center mb-4 text-xs font-mono border border-indigo-200/60">
+          04
+        </div>
+<h3 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Measuring Improvement</h3>
+<p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
+          Quantifiable competency shift tracked over longitudinal service, replacing paper attendance registers with verified mathematical and procedural telemetry.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] font-semibold text-indigo-700">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-600 mr-2"></span>
+        Unverified outcomes
+      </div>
+</div>
+</div>
+<!-- The Proposed Solution Diagram -->
+<div class="bg-white rounded-3xl p-8 lg:p-10 border border-slate-200/90 card-soft-shadow">
+<div class="max-w-3xl mb-8">
+<span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-teal-50 text-teal-700 border border-teal-200/80 mb-2">
+        THE STATSKILL AI RESOLUTION BRIDGE
+      </span>
+<h3 class="text-2xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif]">
+        An Official AI-Enabled Infrastructure for Real-Time Capability
+      </h3>
+<p class="text-sm text-slate-600 mt-2 leading-relaxed">
+        StatSkill AI seamlessly connects continuous diagnostic assessments, tailored learning pathways, automated document-grounded MCQ verification, and real-time supervisor progress tracking into a closed-loop national training ecosystem.
+      </p>
+</div>
+<!-- Editorial Solution Architecture Diagram -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:border-cyan-400 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-semibold mb-2">01 / DIAGNOSTIC ENGINE</div>
+<div class="text-sm font-bold text-slate-900 mb-1">Continuous Baseline Assessment</div>
+<div class="text-xs text-slate-500">Multivariate item testing evaluates exact domain proficiency against MoSPI grade benchmarks.</div>
+</div>
+<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:border-cyan-400 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-semibold mb-2">02 / PATHWAY SYNTHESIS</div>
+<div class="text-sm font-bold text-slate-900 mb-1">Tailored Learning Modules</div>
+<div class="text-xs text-slate-500">Adaptive curriculum directs officers strictly to high-deficiency sub-skills, saving hundreds of training hours.</div>
+</div>
+<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:border-cyan-400 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-semibold mb-2">03 / VERIFIED TESTING</div>
+<div class="text-sm font-bold text-slate-900 mb-1">Document-Grounded MCQs</div>
+<div class="text-xs text-slate-500">RAG extracts questions directly from official manuals, validated 100% by human faculty before deployment.</div>
+</div>
+<div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:border-cyan-400 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-semibold mb-2">04 / GOVERNANCE TELEMETRY</div>
+<div class="text-sm font-bold text-slate-900 mb-1">Real-Time Officer Verification</div>
+<div class="text-xs text-slate-500">Supervisors inspect live competency growth curves, assignment readiness quotas, and certified completion hashes.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: NEW SECTION 1 -->
+<!-- BEGIN: NEW SECTION 2 – EXPLORE THE 8 CORE MODULES -->
+<section class="py-20 bg-white border-t border-slate-200/80" data-purpose="core-modules-section" id="core-modules">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold text-cyan-600 tracking-widest uppercase block mb-2 font-['Plus_Jakarta_Sans',sans-serif]">CORE PLATFORM CAPABILITIES</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 font-['Plus_Jakarta_Sans',sans-serif]">
+      Everything Needed for Continuous Competency Development
+    </h2>
+<p class="text-slate-500 text-base sm:text-lg">
+      Eight dedicated sub-systems engineered precisely for official statistical production and field enumeration workflows.
+    </p>
+</div>
+<!-- Numbered 01-08 Layout Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+<!-- Module 01 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 01</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">Login Profiles</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          Secure role-based access with tailored operational interfaces for Admin, Trainer, and Trainee. Enforces institutional boundary isolation, single sign-on federation, and tailored views for training coordinators and field staff.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>RBAC Authentication</span>
+<span class="text-teal-700 font-semibold">Trainee / Trainer / Admin</span>
+</div>
+</div>
+<!-- Module 02 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 02</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">Competency Gap Dashboard</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          High-visibility multi-axis visualizer charting individual strengths, baseline levels, and critical focus areas against national benchmarks. Instantly exposes domain weakness in sampling designs, outlier pruning, and price indices.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>8 Pillar Radar Matrix</span>
+<span class="text-teal-700 font-semibold">Real-Time Concordance</span>
+</div>
+</div>
+<!-- Module 03 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 03</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">AI Assistance</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          RAG-powered statistical tutor answering complex queries directly grounded in verified MoSPI manuals, classification codes (NIC, NCO), and circulars with exact clause, section, and page source citations. Zero hallucination guarantee.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>MoSPI RAG Engine</span>
+<span class="text-teal-700 font-semibold">Grounded &amp; Cited</span>
+</div>
+</div>
+<!-- Module 04 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 04</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">Personalised Learning</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          Adaptive algorithmic engine providing dynamic curriculum recommendations matched to real-time skill gaps and upcoming survey assignments. Automatically schedules short micro-lessons to close specific deficit vectors in minutes.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>Dynamic Pathway Synthesis</span>
+<span class="text-teal-700 font-semibold">Assignment-Aware</span>
+</div>
+</div>
+<!-- Module 05 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 05</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">Quiz &amp; MCQs</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          Automated question engine formulating scenario-based assessments from uploaded official documentation, with strict mandatory human-in-the-loop trainer validation before any generated test enters active evaluation banks.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>Human-in-the-Loop Gate</span>
+<span class="text-teal-700 font-semibold">100% Faculty Verified</span>
+</div>
+</div>
+<!-- Module 06 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 06</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">Offline Learning</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          Complete progressive offline synchronization allowing field officers to download learning modules, documentation, and quizzes for field stations without internet connectivity. Caches results and auto-syncs upon connection.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>Progressive Web App</span>
+<span class="text-teal-700 font-semibold">Encrypted IndexedDB</span>
+</div>
+</div>
+<!-- Module 07 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 07</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">Content Library</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          Centrally governed repository categorizing official manuals, methodology notes, gazettes, survey schedules, and video briefings. Features instant full-text search with metadata tags categorized by NSS rounds and MoSPI divisions.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>Centralized MoSPI Vault</span>
+<span class="text-teal-700 font-semibold">Categorized &amp; Searchable</span>
+</div>
+</div>
+<!-- Module 08 -->
+<div class="p-7 rounded-3xl bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-cyan-500/40 hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs font-extrabold text-cyan-700 tracking-wider bg-cyan-100/60 px-2.5 py-1 rounded-full">MODULE 08</span>
+<div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-700 shadow-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+</div>
+</div>
+<h3 class="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] mb-2">Progress Tracker</h3>
+<p class="text-sm text-slate-600 leading-relaxed mb-4">
+          Longitudinal competency analytics recording assessment trajectory, badge issuance, and verifiable post-training skill acquisition over months of field deployments. Generates verifiable audit hashes for official cadre evaluation.
+        </p>
+</div>
+<div class="pt-3 border-t border-slate-200/70 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+<span>Longitudinal Telemetry</span>
+<span class="text-teal-700 font-semibold">Audit-Ready Hashes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: NEW SECTION 2 -->
+<!-- BEGIN: NEW SECTION 3 – HOW STATSKILL AI WORKS -->
+<section class="py-20 bg-slate-50/70 border-t border-slate-200/80" data-purpose="how-it-works-section" id="how-it-works">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold text-cyan-600 tracking-widest uppercase block mb-2 font-['Plus_Jakarta_Sans',sans-serif]">CONTINUOUS LEARNING &amp; VERIFICATION WORKFLOW</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 font-['Plus_Jakarta_Sans',sans-serif]">
+      From Identifying Gaps to Measuring Improvement
+    </h2>
+<p class="text-slate-500 text-base sm:text-lg">
+      An 8-stage closed-loop continuous enhancement cycle engineered for statistical civil service capacity building.
+    </p>
+</div>
+<!-- Connected 8-Stage Timeline / Workflow -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+<!-- Stage 1 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-slate-900 text-white font-mono font-bold text-xs flex items-center justify-center">1</span>
+<span class="text-[10px] font-mono text-slate-400 font-semibold">AUTH</span>
+</div>
+<h4 class="text-base font-bold text-slate-900 mb-1 font-['Plus_Jakarta_Sans',sans-serif]">LOGIN</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+          Statistical officer accesses the portal with official credentials and designated role context (ISS cadre / state directorate).
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-cyan-700">Initial authentication</div>
+</div>
+<!-- Stage 2 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-cyan-600 text-white font-mono font-bold text-xs flex items-center justify-center">2</span>
+<span class="text-[10px] font-mono text-slate-400 font-semibold">BASELINE</span>
+</div>
+<h4 class="text-base font-bold text-slate-900 mb-1 font-['Plus_Jakarta_Sans',sans-serif]">ASSESS</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+          Officer undertakes a diagnostic baseline assessment targeting their domain (National Accounts, Surveys, CPI, or SDRD).
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-cyan-700">Multi-axis testing</div>
+</div>
+<!-- Stage 3 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-teal-600 text-white font-mono font-bold text-xs flex items-center justify-center">3</span>
+<span class="text-[10px] font-mono text-slate-400 font-semibold">DIAGNOSIS</span>
+</div>
+<h4 class="text-base font-bold text-slate-900 mb-1 font-['Plus_Jakarta_Sans',sans-serif]">IDENTIFY</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+          AI-assisted competency analysis maps granular gaps across 8 core statistical pillars against role requirements.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-cyan-700">Radar discrepancy map</div>
+</div>
+<!-- Stage 4 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-slate-800 text-white font-mono font-bold text-xs flex items-center justify-center">4</span>
+<span class="text-[10px] font-mono text-slate-400 font-semibold">CURATE</span>
+</div>
+<h4 class="text-base font-bold text-slate-900 mb-1 font-['Plus_Jakarta_Sans',sans-serif]">RECOMMEND</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+          Algorithmic engine curates tailored, high-priority learning micro-modules specifically closing ranked skill deficits.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-cyan-700">Adaptive curriculum queue</div>
+</div>
+<!-- Stage 5 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-cyan-700 text-white font-mono font-bold text-xs flex items-center justify-center">5</span>
+<span class="text-[10px] font-mono text-slate-400 font-semibold">STUDY</span>
+</div>
+<h4 class="text-base font-bold text-slate-900 mb-1 font-['Plus_Jakarta_Sans',sans-serif]">LEARN</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+          Officer engages with structured curriculum online or via synced offline packages with citations to MoSPI standard manuals.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-cyan-700">Online &amp; offline modules</div>
+</div>
+<!-- Stage 6 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-teal-700 text-white font-mono font-bold text-xs flex items-center justify-center">6</span>
+<span class="text-[10px] font-mono text-slate-400 font-semibold">APPLY</span>
+</div>
+<h4 class="text-base font-bold text-slate-900 mb-1 font-['Plus_Jakarta_Sans',sans-serif]">PRACTISE</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+          Hands-on validation through scenario tests, simulation exercises, and masked microdata runs in the simulation lab.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-cyan-700">Mock microdata labs</div>
+</div>
+<!-- Stage 7 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-200/80 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-indigo-700 text-white font-mono font-bold text-xs flex items-center justify-center">7</span>
+<span class="text-[10px] font-mono text-slate-400 font-semibold">METRICS</span>
+</div>
+<h4 class="text-base font-bold text-slate-900 mb-1 font-['Plus_Jakarta_Sans',sans-serif]">TRACK</h4>
+<p class="text-xs text-slate-500 leading-relaxed">
+          Real-time telemetry records performance metrics, speed, conceptual mastery, and time-to-completion milestones.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-cyan-700">Supervisor oversight</div>
+</div>
+<!-- Stage 8 (Loop Back) -->
+<div class="bg-gradient-to-br from-cyan-900 to-slate-900 text-white rounded-3xl p-6 border border-cyan-800 card-soft-shadow relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-cyan-400 text-slate-900 font-mono font-bold text-xs flex items-center justify-center">8</span>
+<span class="text-[10px] font-mono text-cyan-300 font-semibold">ITERATE ↺</span>
+</div>
+<h4 class="text-base font-bold text-white mb-1 font-['Plus_Jakarta_Sans',sans-serif]">REASSESS</h4>
+<p class="text-xs text-slate-300 leading-relaxed">
+          Updated evaluation recalibrates the competency dashboard, issues verified hashes, and triggers the next continuous growth cycle.
+        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-cyan-800/80 text-[11px] font-mono text-cyan-300 flex items-center justify-between">
+<span>Continuous Loop</span>
+<span class="text-teal-300">Recalibrates to Step 2 ↺</span>
+</div>
+</div>
+</div>
+<!-- Loopback Callout Banner -->
+<div class="mt-8 bg-cyan-50/70 border border-cyan-200/80 rounded-2xl p-4 sm:p-5 flex items-center justify-between flex-wrap gap-4">
+<div class="flex items-center space-x-3">
+<div class="w-7 h-7 rounded-full bg-cyan-600 text-white flex items-center justify-center text-xs">↺</div>
+<div class="text-xs sm:text-sm text-slate-700 font-medium">
+<strong class="text-slate-900">Continuous Cadre Recalibration:</strong> Every reassessment updates the ministry-wide readiness matrix for upcoming NSS rounds and census assignments.
+      </div>
+</div>
+<span class="text-xs font-mono font-semibold text-cyan-800">Standard MoSPI Capacity Protocol</span>
+</div>
+</div>
+</section>
+<!-- END: NEW SECTION 3 -->
+<!-- BEGIN: NEW SECTION 4 – TECHNOLOGY, SECURITY & FUTURE ROADMAP -->
+<section class="py-20 bg-white border-t border-slate-200/80" data-purpose="tech-architecture-section" id="tech-architecture">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold text-cyan-600 tracking-widest uppercase block mb-2 font-['Plus_Jakarta_Sans',sans-serif]">ENTERPRISE ARCHITECTURE &amp; TRUST FRAMEWORK</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 font-['Plus_Jakarta_Sans',sans-serif]">
+      Built for Secure and Scalable Statistical Learning
+    </h2>
+<p class="text-slate-500 text-base sm:text-lg">
+      A defense-in-depth architecture adhering to Indian Government e-Governance standards and mission-critical reliability.
+    </p>
+</div>
+<!-- PART A – TECHNOLOGY ARCHITECTURE STACK -->
+<div class="mb-16">
+<div class="mb-6 flex items-center justify-between">
+<h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-cyan-600 inline-block"></span>
+<span>Part A — Technology Architecture Stack</span>
+</h3>
+<span class="text-xs font-mono text-slate-500">6-Layer Enterprise Stack</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Frontend -->
+<div class="bg-slate-50/90 rounded-2xl p-6 border border-slate-200 hover:border-slate-300 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-bold uppercase tracking-wider mb-2">Layer 1: Frontend Client</div>
+<h4 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Responsive React &amp; Offline PWA</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          High-performance React application featuring offline-first Progressive Web App capabilities, localized typography, and responsive touch controls for mobile enumerators.
+        </p>
+</div>
+<!-- Backend -->
+<div class="bg-slate-50/90 rounded-2xl p-6 border border-slate-200 hover:border-slate-300 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-bold uppercase tracking-wider mb-2">Layer 2: Core Services</div>
+<h4 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Resilient API Gateway &amp; Engine</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          RESTful micro-endpoints, cryptographic session-based authentication, and an adaptive quiz orchestration engine calculating multi-stage competency trajectories.
+        </p>
+</div>
+<!-- AI Engine -->
+<div class="bg-slate-50/90 rounded-2xl p-6 border border-slate-200 hover:border-slate-300 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-bold uppercase tracking-wider mb-2">Layer 3: Cognitive Layer</div>
+<h4 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Document-Grounded RAG LLM</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          Retrieval-augmented generation grounding LLM inference strictly within official MoSPI gazettes, automating MCQ synthesis with exact page and section citations.
+        </p>
+</div>
+<!-- Database -->
+<div class="bg-slate-50/90 rounded-2xl p-6 border border-slate-200 hover:border-slate-300 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-bold uppercase tracking-wider mb-2">Layer 4: Relational Data</div>
+<h4 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">PostgreSQL Enterprise</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          ACID-compliant relational database handling hierarchical civil service cadres, relational competency matrices, audit trails, and assessment telemetry.
+        </p>
+</div>
+<!-- Storage -->
+<div class="bg-slate-50/90 rounded-2xl p-6 border border-slate-200 hover:border-slate-300 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-bold uppercase tracking-wider mb-2">Layer 5: Vaults &amp; Vectors</div>
+<h4 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">Vector Vaults &amp; Client IndexedDB</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          Indexed dense vector embeddings for MoSPI manuals alongside encrypted client-side IndexedDB caching for zero-connectivity field operation.
+        </p>
+</div>
+<!-- Integration -->
+<div class="bg-slate-50/90 rounded-2xl p-6 border border-slate-200 hover:border-slate-300 transition">
+<div class="text-[10px] font-mono text-cyan-700 font-bold uppercase tracking-wider mb-2">Layer 6: National Grid</div>
+<h4 class="text-base font-bold text-slate-900 mb-2 font-['Plus_Jakarta_Sans',sans-serif]">iGOT Karmayogi Bridge</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          Future-ready API bridge for seamless course interoperability and credential exchange with the Government of India's national iGOT Karmayogi capacity building portal.
+        </p>
+</div>
+</div>
+</div>
+<!-- PART B – SECURITY & GOVERNANCE -->
+<div class="mb-16">
+<div class="mb-6 flex items-center justify-between">
+<h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-teal-600 inline-block"></span>
+<span>Part B — Security &amp; Trust Framework</span>
+</h3>
+<span class="text-xs font-mono text-teal-700 font-semibold bg-teal-50 px-2.5 py-1 rounded-full border border-teal-200">ISO-Aligned Security</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+<div>
+<div class="text-cyan-700 mb-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">Strict RBAC</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Role-Based Access Control dividing Admin, Trainer, and Trainee boundaries.</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+<div>
+<div class="text-cyan-700 mb-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">AES-256 &amp; TLS 1.3</h4>
+<p class="text-xs text-slate-500 leading-relaxed">End-to-end cryptographic encryption at rest and in-transit for all sensitive data.</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+<div>
+<div class="text-cyan-700 mb-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">Protected Cache</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Watermarked, protected offline storage with cryptographic cache invalidation.</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+<div>
+<div class="text-teal-700 mb-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">Human-in-the-Loop</h4>
+<p class="text-xs text-slate-500 leading-relaxed">100% Trainer review and approval gate before any AI question enters test banks.</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
+<div>
+<div class="text-cyan-700 mb-2">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">Factual Grounding</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Every AI response requires traceable source citations to approved MoSPI documentation.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- PART C – IMPLEMENTATION ROADMAP -->
+<div>
+<div class="mb-6 flex items-center justify-between">
+<h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-slate-900 inline-block"></span>
+<span>Part C — Phased Implementation Roadmap</span>
+</h3>
+<span class="text-xs font-mono text-slate-500">4-Phase Rollout Plan</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Phase 1 -->
+<div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+<div class="text-xs font-mono font-bold text-cyan-700 mb-1">PHASE 1</div>
+<div class="text-sm font-bold text-slate-900 mb-2">Foundational Rollout</div>
+<p class="text-xs text-slate-600 leading-relaxed mb-4">
+          Three-role authentication, centralized content library, diagnostic baseline quizzes, and initial gap dashboard for NSSO regional staff.
+        </p>
+<span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-cyan-100 text-cyan-800">
+          Core Complete (Prototype)
+        </span>
+</div>
+<!-- Phase 2 -->
+<div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+<div class="text-xs font-mono font-bold text-teal-700 mb-1">PHASE 2</div>
+<div class="text-sm font-bold text-slate-900 mb-2">Adaptive Intelligence</div>
+<p class="text-xs text-slate-600 leading-relaxed mb-4">
+          Dynamic personalized course recommendations, module-level competency checkpoints, and supervisor longitudinal tracking dashboards.
+        </p>
+<span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 text-teal-800">
+          Active Integration
+        </span>
+</div>
+<!-- Phase 3 -->
+<div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+<div class="text-xs font-mono font-bold text-slate-700 mb-1">PHASE 3</div>
+<div class="text-sm font-bold text-slate-900 mb-2">Generative Support</div>
+<p class="text-xs text-slate-600 leading-relaxed mb-4">
+          RAG-driven MoSPI AI assistant, automated document-grounded MCQ synthesis, and trainer editorial approval workbench.
+        </p>
+<span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-200 text-slate-700">
+          Validation Lab
+        </span>
+</div>
+<!-- Phase 4 -->
+<div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+<div class="text-xs font-mono font-bold text-indigo-700 mb-1">PHASE 4</div>
+<div class="text-sm font-bold text-slate-900 mb-2">National Scale</div>
+<p class="text-xs text-slate-600 leading-relaxed mb-4">
+          Offline field synchronization, iGOT Karmayogi interoperability bridge, comprehensive security audits, and multi-state pilot deployment.
+        </p>
+<span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-800">
+          Cadre Deployment
+        </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: NEW SECTION 4 -->
+<!-- BEGIN: FeaturesSection -->
+<section class="py-20 bg-white" data-purpose="features-grid" id="features">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold text-cyan-600 tracking-widest uppercase block mb-2 font-['Plus_Jakarta_Sans',sans-serif]">EVERYTHING IN ONE PLACE</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 font-['Plus_Jakarta_Sans',sans-serif]">
+        Built for the way statisticians work.
+      </h2>
+<p class="text-slate-500 text-base sm:text-lg">
+        From the field office to headquarters — online or off.
+      </p>
+</div>
+<!-- Academy Photo Banner -->
+<div class="mb-14 rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 relative bg-gradient-to-br from-slate-900 via-cyan-950 to-[#041928] p-6 sm:p-8 text-white">
+<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="space-y-3 max-w-xl">
+<span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/10 backdrop-blur-md border border-white/20 text-cyan-300">
+        National Statistical Systems Training Academy (NSSTA)
+      </span>
+<h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white font-['Plus_Jakarta_Sans',sans-serif]">
+        Empowering statistical civil servants with continuous, real-world skill verification.
+      </h3>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+        Standardized curriculum covering National Accounts, Consumer Price Indices, Periodic Labour Force Surveys, and automated microdata processing protocols.
+      </p>
+</div>
+<!-- Topic-related schematic diagram badge -->
+<div class="flex-shrink-0 grid grid-cols-2 gap-3 w-full md:w-auto text-xs font-mono">
+<div class="bg-slate-900/80 border border-cyan-800/40 rounded-xl p-3 text-center">
+<div class="text-cyan-400 font-bold text-base">80th Round</div>
+<div class="text-[10px] text-slate-400">NSSO Standard</div>
+</div>
+<div class="bg-slate-900/80 border border-cyan-800/40 rounded-xl p-3 text-center">
+<div class="text-teal-400 font-bold text-base">ISO-Compliant</div>
+<div class="text-[10px] text-slate-400">Data Governance</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 8 Features Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+<!-- Feature 1 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<circle cx="12" cy="12" r="5"></circle>
+<circle cx="12" cy="12" r="1"></circle>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Competency Gap Analysis</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          Radar view of 8 core statistical skills against role benchmarks.
+        </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="12" rx="2" width="16" x="4" y="6"></rect>
+<circle cx="9" cy="11" r="1.5"></circle>
+<circle cx="15" cy="11" r="1.5"></circle>
+<path d="M10 15h4"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">AI Chat Assistant</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          A tutor trained on MoSPI manuals that answers in plain language.
+        </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-teal-500 text-white flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Personalized Courses</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          Learning paths that adapt to your gaps and the tasks ahead.
+        </p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Interactive MCQ Quizzes</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          Timed quizzes with instant scoring and explanations.
+        </p>
+</div>
+<!-- Feature 5 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Offline Downloads</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          Full access to manuals and micro-courses for field visits with no network.
+        </p>
+</div>
+<!-- Feature 6 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Learning Library</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          Searchable manuals, codes, schedules, and past NSSO surveys.
+        </p>
+</div>
+<!-- Feature 7 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Progress Tracking</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          Longitudinal score trends and completion milestones at a glance.
+        </p>
+</div>
+<!-- Feature 8 -->
+<div class="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow flex flex-col justify-start">
+<div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-5">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Task Readiness</h3>
+<p class="text-sm text-slate-500 leading-relaxed">
+          Know if you're ready for a real assignment — and what to learn first.
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FeaturesSection -->
+<!-- BEGIN: GovernmentWorkSimulatorExtension -->
+<section class="py-16 bg-slate-50 border-t border-slate-200/80" data-purpose="gov-simulator-section" id="simulator">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+<!-- Simulation Lab Showcase -->
+<div class="bg-white rounded-3xl p-8 border border-slate-200/70 card-soft-shadow relative overflow-hidden">
+<div class="absolute inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute inset-0 bg-gradient-to-br from-cyan-50/40 to-slate-50 opacity-80 pointer-events-none"></div></div>
+<div class="relative z-10">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold mb-4">
+<span>MoSPI Protocol Sandbox</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 mb-3 font-['Plus_Jakarta_Sans',sans-serif]">Official Government Simulation Lab</h3>
+<p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Hands-on practice with masked NSSO microdata, automated outlier imputation, and field round casualty schedules without impacting live administrative registries.
+          </p>
+<div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs font-mono text-slate-600 space-y-1.5 relative">
+<div class="text-cyan-700 font-semibold">// PLFS Verification Run</div>
+<div>&gt; Stratum weight adjustment: OK (factor = 1.042)</div>
+<div>&gt; Multiplier formula validation: Complete (0 discrepancies)</div>
+</div>
+</div>
+</div>
+<!-- Certification Extension -->
+<div class="bg-white rounded-3xl p-8 border border-slate-200/70 card-soft-shadow flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-semibold mb-4">
+<span>Accredited Framework</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 mb-3 font-['Plus_Jakarta_Sans',sans-serif]">Certified Statistical Competency (PSCC-2025)</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+            Seamless alignment with National Statistical Systems. Every passed module generates verifiable competency hashes for inter-departmental deployments and promotions.
+          </p>
+</div>
+<div class="mt-6 flex items-center space-x-4 pt-4 border-t border-slate-100">
+<div class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold text-sm">
+            SIH
+          </div>
+<div class="text-xs text-slate-500">
+            Ministry recognized continuous professional capacity development benchmark.
+          </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: GovernmentWorkSimulatorExtension -->
+
+`;

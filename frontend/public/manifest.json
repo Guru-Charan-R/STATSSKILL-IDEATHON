@@ -1,0 +1,10 @@
+{
+  "name": "StatSkill AI",
+  "short_name": "StatSkill",
+  "description": "AI-enabled competency and capacity building platform for India's Official Statistical System",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fb",
+  "theme_color": "#0284c7",
+  "icons": []
+}

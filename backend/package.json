@@ -1,0 +1,26 @@
+{
+  "name": "statskill-ai-backend",
+  "version": "1.0.0",
+  "description": "StatSkill AI backend (Express + SQLite + Groq)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed.js",
+    "seed:content": "node seed_content_update.js",
+    "setup": "node seed.js && node seed_content_update.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.3.0",
+    "express-rate-limit": "^7.5.0",
+    "groq-sdk": "^1.6.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.5.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
