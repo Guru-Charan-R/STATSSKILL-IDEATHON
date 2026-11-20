@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useSettings } from '../context/SettingsContext.jsx';
+import { API_BASE } from '../lib/api.js';
 
 // The model is asked for plain text, but older/stored answers can still contain
 // Markdown or LaTeX. Convert those symbols to readable plain text instead of
@@ -76,7 +77,7 @@ export default function Chatbot() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('/api/chat/stream', {
+      const res = await fetch(`${API_BASE}/chat/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
         body: JSON.stringify({ message: text, conversation_id: convId, language, context: contextForPath() }),
