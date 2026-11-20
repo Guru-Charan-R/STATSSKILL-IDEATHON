@@ -1,9 +1,24 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 const db = require('../db');
-const { signToken, authRequired } = require('../middleware/authMiddleware');
+const { signToken, authRequired, JWT_SECRET } = require('../middleware/authMiddleware');
 
 const router = express.Router();
+
+const safeUser = (u) => ({
+  id: u.id, name: u.name, email: u.email, role: u.role,
+  department: u.department, region: u.region, designation: u.designation
+});
+
+// Serverless lambdas each have their own temporary SQLite DB, so a user created
+// on one instance can be missing on another. This signed receipt lets the same
+// browser re-authenticate a locally known account without storing the password.
+function signReceipt(user, password) {
+  const pv = crypto.createHmac('sha256', JWT_SECRET).update(`${user.email}:${password}`).digest('hex');
+  return jwt.sign({ ...safeUser(user), pv }, JWT_SECRET, { expiresIn: '30d' });
+}
 
 router.post('/register', (req, res) => {
   const { name, email, password, role, department, region, designation } = req.body;
@@ -17,7 +32,7 @@ router.post('/register', (req, res) => {
   const info = stmt.run(name, email, hash, allowedRole, department || null, region || null, designation || null);
   const user = db.prepare('SELECT id,name,email,role,department,region,designation FROM users WHERE id=?').get(info.lastInsertRowid);
   const token = signToken(user);
-  res.json({ user, token });
+  res.json({ user, token, receipt: signReceipt(user, password) });
 });
 
 router.post('/login', (req, res) => {
@@ -26,9 +41,23 @@ router.post('/login', (req, res) => {
   const user = db.prepare('SELECT * FROM users WHERE email = ?').get(email);
   if (!user) return res.status(401).json({ error: 'Invalid credentials' });
   if (!bcrypt.compareSync(password, user.password_hash)) return res.status(401).json({ error: 'Invalid credentials' });
-  const safe = { id: user.id, name: user.name, email: user.email, role: user.role, department: user.department, region: user.region, designation: user.designation };
+  const safe = safeUser(user);
   const token = signToken(safe);
-  res.json({ user: safe, token });
+  res.json({ user: safe, token, receipt: signReceipt(safe, password) });
+});
+
+// Fallback for a browser that registered/logged in before this lambda's DB was
+// reset. The receipt is signed by the server and proves the email/password pair.
+router.post('/relogin', (req, res) => {
+  const { email, password, receipt } = req.body;
+  if (!email || !password || !receipt) return res.status(400).json({ error: 'email, password and receipt required' });
+  let payload;
+  try { payload = jwt.verify(receipt, JWT_SECRET); } catch { return res.status(401).json({ error: 'Invalid credentials' }); }
+  if (payload.email !== email) return res.status(401).json({ error: 'Invalid credentials' });
+  const pv = crypto.createHmac('sha256', JWT_SECRET).update(`${email}:${password}`).digest('hex');
+  if (pv !== payload.pv) return res.status(401).json({ error: 'Invalid credentials' });
+  const user = safeUser(payload);
+  res.json({ user, token: signToken(user), receipt });
 });
 
 router.get('/me', authRequired, (req, res) => {

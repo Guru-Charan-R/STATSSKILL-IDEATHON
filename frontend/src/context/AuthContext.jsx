@@ -5,6 +5,7 @@ import { API_BASE } from '../lib/api.js';
 const AuthContext = createContext(null);
 const API = API_BASE;
 const USER_KEY = 'statskill_user';
+const receiptKey = (email) => `statskill_receipt_${String(email || '').trim().toLowerCase()}`;
 
 function readStoredUser() {
   try {
@@ -54,6 +55,7 @@ export function AuthProvider({ children }) {
   const persistSession = (data) => {
     localStorage.setItem('token', data.token);
     localStorage.setItem(USER_KEY, JSON.stringify(data.user));
+    if (data.receipt) localStorage.setItem(receiptKey(data.user.email), data.receipt);
     skipMeRef.current = true;
     setToken(data.token);
     axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
@@ -62,8 +64,25 @@ export function AuthProvider({ children }) {
   };
 
   const login = async (email, password) => {
-    const r = await axios.post(`${API}/auth/login`, { email, password });
-    return persistSession(r.data);
+    try {
+      const r = await axios.post(`${API}/auth/login`, { email, password });
+      return persistSession(r.data);
+    } catch (err) {
+      // A freshly registered user can live only on another serverless instance.
+      // Fall back to the server-signed receipt kept in this browser.
+      if (err?.response?.status === 401) {
+        const receipt = localStorage.getItem(receiptKey(email));
+        if (receipt) {
+          try {
+            const r2 = await axios.post(`${API}/auth/relogin`, { email, password, receipt });
+            return persistSession(r2.data);
+          } catch {
+            // fall through and surface the original login error
+          }
+        }
+      }
+      throw err;
+    }
   };
 
   const register = async (payload) => {
@@ -78,6 +97,8 @@ export function AuthProvider({ children }) {
     setToken(null);
     setUser(null);
     delete axios.defaults.headers.common['Authorization'];
+    // Keep re-auth receipts so a locally known account can log in again even
+    // if this lambda instance has a fresh temporary database.
   };
 
   return <AuthContext.Provider value={{ user, token, loading, login, register, logout }}>{children}</AuthContext.Provider>;

@@ -32,6 +32,8 @@ if (process.env.VERCEL) {
       require('./seed_content_update.js');
       console.log('Cold-start seed complete');
     }
+    // Self-contained test documents (inline content, no uploaded files needed).
+    require('./seed_documents.js');
   } catch (err) {
     console.error('Cold-start seed failed:', err.message);
   }

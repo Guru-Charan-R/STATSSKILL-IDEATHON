@@ -72,3 +72,6 @@ console.log('Seed complete.');
 console.log('Admin: admin@statskill.ai / Admin@123');
 console.log('Trainer: trainer@statskill.ai / Trainer@123');
 console.log('Trainee: trainee@statskill.ai / Trainee@123');
+
+// Inline test documents for the Document Library / RAG
+require('./seed_documents.js');
