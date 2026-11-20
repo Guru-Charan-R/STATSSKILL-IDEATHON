@@ -64,25 +64,19 @@ export function AuthProvider({ children }) {
   };
 
   const login = async (email, password) => {
-    try {
-      const r = await axios.post(`${API}/auth/login`, { email, password });
-      return persistSession(r.data);
-    } catch (err) {
-      // A freshly registered user can live only on another serverless instance.
-      // Fall back to the server-signed receipt kept in this browser.
-      if (err?.response?.status === 401) {
-        const receipt = localStorage.getItem(receiptKey(email));
-        if (receipt) {
-          try {
-            const r2 = await axios.post(`${API}/auth/relogin`, { email, password, receipt });
-            return persistSession(r2.data);
-          } catch {
-            // fall through and surface the original login error
-          }
-        }
+    // A locally known account may live only on another serverless instance, so
+    // use its server-signed receipt first to avoid a failed login request.
+    const receipt = localStorage.getItem(receiptKey(email));
+    if (receipt) {
+      try {
+        const r = await axios.post(`${API}/auth/relogin`, { email, password, receipt });
+        return persistSession(r.data);
+      } catch {
+        // stale receipt or account now on this instance - try normal login
       }
-      throw err;
     }
+    const r = await axios.post(`${API}/auth/login`, { email, password });
+    return persistSession(r.data);
   };
 
   const register = async (payload) => {
