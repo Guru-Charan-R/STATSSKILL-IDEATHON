@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const pdfParse = require('pdf-parse');
 const db = require('../db');
-const { authRequired, roleRequired } = require('../middleware/authMiddleware');
+const { authRequired, optionalAuth, roleRequired } = require('../middleware/authMiddleware');
 
 const router = express.Router();
 const UPLOAD_DIR = process.env.UPLOADS_DIR || path.join(__dirname, '..', '..', 'uploads');
@@ -72,26 +72,28 @@ router.post('/upload', authRequired, roleRequired('admin','trainer'), upload.sin
   res.status(201).json({ document: doc, chunks: chunks.length });
 });
 
-router.get('/', authRequired, (req, res) => {
+router.get('/', optionalAuth, (req, res) => {
   const status = req.query.status;
   let sql = 'SELECT d.*, u.name as uploader_name FROM documents d LEFT JOIN users u ON u.id=d.uploaded_by';
   const params = [];
   if (status) { sql += ' WHERE d.status = ?'; params.push(status); }
   sql += ' ORDER BY d.id DESC';
   const docs = db.prepare(sql).all(...params);
-  // trainees only see approved
-  if (req.user.role === 'trainee') {
+  // anonymous visitors and trainees only see approved documents
+  const role = req.user?.role;
+  if (!role || role === 'trainee') {
     const approved = docs.filter(d => d.status === 'approved');
     return res.json({ documents: approved });
   }
   res.json({ documents: docs });
 });
 
-router.get('/:id', authRequired, (req, res) => {
+router.get('/:id', optionalAuth, (req, res) => {
   const id = Number(req.params.id);
   const doc = db.prepare('SELECT d.*, u.name as uploader_name FROM documents d LEFT JOIN users u ON u.id=d.uploaded_by WHERE d.id=?').get(id);
   if (!doc) return res.status(404).json({ error: 'Not found' });
-  if (req.user.role === 'trainee' && doc.status !== 'approved') return res.status(403).json({ error: 'Forbidden' });
+  const role = req.user?.role;
+  if ((!role || role === 'trainee') && doc.status !== 'approved') return res.status(403).json({ error: 'Forbidden' });
   const chunks = db.prepare('SELECT id,chunk_index,content,page FROM document_chunks WHERE document_id=? ORDER BY chunk_index').all(id);
   res.json({ document: doc, chunks });
 });
@@ -109,11 +111,12 @@ router.patch('/:id/archive', authRequired, roleRequired('admin'), (req, res) => 
 });
 
 // RAG query: retrieve chunks + ask Groq
-router.post('/ask', authRequired, async (req, res) => {
+router.post('/ask', optionalAuth, async (req, res) => {
   const { question, document_id, language } = req.body;
   if (!question) return res.status(400).json({ error: 'question required' });
 
-  const statusFilter = req.user.role === 'trainee' ? " AND d.status='approved' " : '';
+  const role = req.user?.role;
+  const statusFilter = (!role || role === 'trainee') ? " AND d.status='approved' " : '';
   const words = question.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 2);
   let sql = "SELECT dc.content, dc.page, d.title, d.id FROM document_chunks dc JOIN documents d ON d.id=dc.document_id WHERE 1=1 " + statusFilter;
   const params = [];
