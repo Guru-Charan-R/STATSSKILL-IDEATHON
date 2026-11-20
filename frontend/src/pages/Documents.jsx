@@ -61,14 +61,21 @@ export default function Documents() {
     setSavingId(d.id);
     setNotice('');
     try {
-      let contents = (await offlineDocuments.get(d.id))?.chunks || null;
+      let contents = null;
       if (navigator.onLine) {
         try {
           const r = await api.get(`/documents/${d.id}`);
           if (r.data.chunks?.length) contents = r.data.chunks.map(c => c.content);
         } catch (e) { /* fall back to the locally saved copy */ }
       }
-      if (!contents || !contents.length) throw new Error('No local copy yet - connect to the internet once to download it.');
+      if (!contents) {
+        try { contents = (await offlineDocuments.get(d.id))?.chunks || null; } catch (e) { /* storage may be blocked */ }
+      }
+      if (!contents || !contents.length) {
+        setNotice('No text is available for this document yet. Connect to the internet and try again.');
+        setSavingId(null);
+        return;
+      }
       const record = {
         id: d.id,
         title: d.title,
@@ -76,11 +83,12 @@ export default function Documents() {
         original_name: d.original_name,
         chunks: contents,
       };
-      await offlineDocuments.save(record);
+      // Saving for offline use is best-effort; it must never block the download.
+      try { await offlineDocuments.save(record); } catch (e) { /* continue with download */ }
       downloadText(`${safeFilename(d.title)}.txt`, buildDocumentText(record, contents.map(content => ({ content }))), 'text/plain;charset=utf-8');
-      setNotice(`"${d.title}" is saved on this device and a downloadable copy was created.`);
+      setNotice(`"${d.title}" was downloaded as a text file.`);
     } catch (err) {
-      setNotice('Could not save offline: ' + (err.response?.data?.error || err.message));
+      setNotice('Could not download: ' + (err.response?.data?.error || err.message));
     }
     setSavingId(null);
   };

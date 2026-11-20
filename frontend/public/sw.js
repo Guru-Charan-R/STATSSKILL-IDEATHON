@@ -1,7 +1,7 @@
 // StatSkill AI offline service worker.
 // Caches the app shell, built assets, uploaded files and visited pages.
 // API calls are never cached (they carry authentication and change often).
-const CACHE = 'statskill-offline-v2';
+const CACHE = 'statskill-offline-v3';
 const SHELL = ['/', '/index.html', '/offline'];
 
 self.addEventListener('install', (e) => {
@@ -51,6 +51,9 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return;
   let url;
   try { url = new URL(req.url); } catch (e) { return; }
+  // Blob/data URLs power in-browser downloads. Never intercept them — the
+  // browser must deliver the file directly instead of the service worker.
+  if (url.protocol === 'blob:' || url.protocol === 'data:') return;
   if (url.origin !== self.location.origin) return; // YouTube and other third parties
 
   const p = url.pathname;

@@ -19,10 +19,11 @@ export function downloadText(filename, text, mime = 'text/html;charset=utf-8') {
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
+  a.style.display = 'none';
   document.body.appendChild(a);
   a.click();
-  document.body.removeChild(a);
-  setTimeout(() => URL.revokeObjectURL(url), 1500);
+  // Keep the object URL alive long enough for slower browsers to finish saving.
+  setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 10000);
 }
 
 const STYLE = `
