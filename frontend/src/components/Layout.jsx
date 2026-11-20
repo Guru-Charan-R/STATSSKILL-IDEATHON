@@ -4,6 +4,7 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import Chatbot from './Chatbot.jsx';
 import GlobalTranslator from './GlobalTranslator.jsx';
+import CertLedgerModal from './CertLedgerModal.jsx';
 
 export default function Layout({ children }) {
   const location = useLocation();
@@ -38,6 +39,7 @@ export default function Layout({ children }) {
       <Footer />
       <Chatbot />
       <GlobalTranslator />
+      <CertLedgerModal />
     </div>
   );
 }

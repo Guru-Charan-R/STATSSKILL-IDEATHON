@@ -15,6 +15,11 @@ const TRANSLATE_ATTRS = ['placeholder', 'title', 'aria-label', 'alt'];
 // restores the source text instead of stacking translations.
 const originals = new WeakMap();
 const originalAttrs = new WeakMap();
+// What this translator last wrote into each node. If React changes the text
+// afterwards (live telemetry, status badges, etc.) we must not overwrite it
+// with a stale cached value on the next mutation-observer pass.
+const lastApplied = new WeakMap();
+const lastAppliedAttrs = new WeakMap();
 
 function translateText(text, lang) {
   const dict = DICTS[lang];
@@ -43,11 +48,22 @@ function walk(root, lang) {
     nodes.push(n);
   }
   nodes.forEach(node => {
-    const original = originals.has(node) ? originals.get(node) : node.nodeValue;
+    const current = node.nodeValue;
+    const applied = lastApplied.get(node);
+    if (applied !== undefined && current !== applied) {
+      // React re-rendered this text. Adopt the new value as the source of
+      // truth so live telemetry is never reverted to an older string.
+      originals.set(node, current);
+    }
+    const original = originals.has(node) ? originals.get(node) : current;
     if (!originals.has(node)) originals.set(node, original);
     const translated = translateText(original, lang);
     const next = translated || original;
     if (node.nodeValue !== next) node.nodeValue = next;
+    // Always record what we last saw, even when nothing needed translating
+    // (e.g. English). Otherwise React's next dynamic update would look like a
+    // brand-new value and could be reverted from the stale cached original.
+    lastApplied.set(node, next);
   });
 }
 
@@ -62,11 +78,17 @@ function walkAttrs(root, lang) {
     TRANSLATE_ATTRS.forEach(name => {
       if (!el.hasAttribute(name)) return;
       const current = el.getAttribute(name);
+      const key = `${name}:${el.id || ''}`;
+      const appliedMap = lastAppliedAttrs.get(el) || new Map();
+      const applied = appliedMap.get(key);
+      if (applied !== undefined && current !== applied) store.set(name, current);
       const original = store.has(name) ? store.get(name) : current;
       if (!store.has(name)) store.set(name, original);
       const translated = translateText(original, lang);
       const next = translated || original;
       if (current !== next) el.setAttribute(name, next);
+      appliedMap.set(key, next);
+      lastAppliedAttrs.set(el, appliedMap);
     });
   }
 }

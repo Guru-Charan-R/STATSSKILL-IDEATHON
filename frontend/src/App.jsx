@@ -14,7 +14,7 @@ import AdminDashboard from './pages/AdminDashboard.jsx';
 import TrainerDashboard from './pages/TrainerDashboard.jsx';
 import TraineeDashboard from './pages/TraineeDashboard.jsx';
 import Documents from './pages/Documents.jsx';
-import Quizzes from './pages/Quizzes.jsx';
+import MicrodataLab from './pages/MicrodataLab.jsx';
 import QuizTake from './pages/QuizTake.jsx';
 import Courses from './pages/Courses.jsx';
 import CourseView from './pages/CourseView.jsx';
@@ -41,7 +41,7 @@ export default function App() {
             <Route path="/trainer" element={<TrainerDashboard />} />
             <Route path="/trainee" element={<TraineeDashboard />} />
             <Route path="/documents" element={<Documents />} />
-            <Route path="/quizzes" element={<Quizzes />} />
+            <Route path="/quizzes" element={<MicrodataLab />} />
             <Route path="/quizzes/:id" element={<QuizTake />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/offline" element={<OfflineLibrary />} />

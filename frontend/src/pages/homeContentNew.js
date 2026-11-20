@@ -37,19 +37,19 @@ export const homeHtmlNew = `
           </span>
 </div>
 <h1 class="font-display-hero text-headline-lg lg:text-display-hero tracking-tight leading-tight text-surface-pure">
-          National Statistical System Capacity Building Portal
+          National Statistical Governance &amp; Simulation Engine
         </h1>
 <p class="font-body-lg text-body-lg text-surface-container max-w-2xl leading-relaxed">
-          AI-Powered Adaptive Learning &amp; Competency Evaluation for Official Statisticians across central ministries, NSSO cadres, and state statistical directorates.
+          The mandatory pre-deployment simulation and accreditation gatekeeper for India's Official Statistical System. Officers prove methodology compliance on live-style microdata before they are cleared to handle national datasets — preventing statistical bias at the source.
         </p>
 <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
 <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-on-tertiary-container hover:bg-teal-accent text-on-primary font-label-md text-label-md rounded shadow-md transition-all hover:scale-[1.01] focus:outline-none" href="#training-matrix">
-<span>Enter Training Matrix</span>
+<span>Enter Simulation Matrix</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
 <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-surface-pure/10 hover:bg-surface-pure/20 text-surface-pure border border-border-strong/40 font-label-md text-label-md rounded backdrop-blur-sm transition-all focus:outline-none" href="#curricula-repository">
 <span class="material-symbols-outlined text-[18px]">library_books</span>
-<span>Browse Curricula</span>
+<span>Browse Governance Modules</span>
 </a>
 </div>
 </div>
@@ -61,7 +61,7 @@ export const homeHtmlNew = `
 </div>
 <div class="flex flex-col">
 <span class="font-display-hero text-headline-md text-surface-pure font-semibold tabular-nums">3,840+</span>
-<span class="font-label-sm text-label-sm text-surface-container font-normal">Statistical Officers Enrolled</span>
+<span class="font-label-sm text-label-sm text-surface-container font-normal">Officers Accredited</span>
 </div>
 </div>
 <div class="flex items-center gap-space-md p-space-md bg-surface-pure/10 backdrop-blur-md rounded border border-surface-pure/15">
@@ -70,7 +70,7 @@ export const homeHtmlNew = `
 </div>
 <div class="flex flex-col">
 <span class="font-display-hero text-headline-md text-surface-pure font-semibold tabular-nums">142</span>
-<span class="font-label-sm text-label-sm text-surface-container font-normal">National Datasets Integrated</span>
+<span class="font-label-sm text-label-sm text-surface-container font-normal">Live Datasets Gated</span>
 </div>
 </div>
 <div class="flex items-center gap-space-md p-space-md bg-surface-pure/10 backdrop-blur-md rounded border border-surface-pure/15">
@@ -79,7 +79,7 @@ export const homeHtmlNew = `
 </div>
 <div class="flex flex-col">
 <span class="font-display-hero text-headline-md text-surface-pure font-semibold tabular-nums">98.4%</span>
-<span class="font-label-sm text-label-sm text-surface-container font-normal">Competency Attainment Rate</span>
+<span class="font-label-sm text-label-sm text-surface-container font-normal">Bias Incidents Prevented</span>
 </div>
 </div>
 </div>
@@ -117,9 +117,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Cadre Competency Audits</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Audit state-level statistical cadres against United Nations Statistical Commission (UNSC) guidelines.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="openAuditor('sampling')" class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             Run Governance Audit <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 <div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
 <div class="flex flex-col gap-1">
@@ -127,9 +127,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Tamper-Proof Cert Ledger</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Verify cryptographically signed competency tokens issued to officers across 36 States/UTs.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="openCert('registry')" class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             View Token Registry <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 <div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
 <div class="flex flex-col gap-1">
@@ -137,9 +137,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Adaptive Benchmark Engine</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Deploy automated diagnostic rubrics for CPI revision, SNA 2008 re-basing, and NSS 80th round.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="openAuditor('cpi')" class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             Configure Matrix Rules <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 </div>
 <div class="mt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md hidden" id="role-panel-trainer">
@@ -149,9 +149,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Assessment Grading Desk</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Review subjective methodologies, survey stratifications, and sample weights formulated by trainees.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="triggerAction('24 methodology evaluations are queued at the Assessment Grading Desk.')" class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             24 Pending Evaluations <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 <div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
 <div class="flex flex-col gap-1">
@@ -159,9 +159,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Data Simulation Laboratory</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Spin up simulated microdata environments with deliberate non-sampling errors for real-time trainee testing.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="openLab()" class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             Launch Microdata Lab <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 <div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
 <div class="flex flex-col gap-1">
@@ -169,9 +169,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Methodology Mastery Analytics</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Identify aggregate conceptual bottlenecks across Multi-Stage Sampling and Hedonic Price Deflation.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="openLab()" class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             View Analytics Matrix <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 </div>
 <div class="mt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md hidden" id="role-panel-trainee">
@@ -181,9 +181,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Assigned Capacity Modules</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Continue Module 4: Price Index Weights &amp; Chained Consumer Price Series Computation.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="triggerAction('Resuming Module 4: Price Index Weights &amp; Chained Consumer Price Series.')" class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             Resume Module (74% Done) <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 <div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
 <div class="flex flex-col gap-1">
@@ -191,9 +191,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">AI Adaptive Mock Viva</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Engage with StatSkill AI assistant on System of National Accounts 2008 balance sheets.</p>
 </div>
-<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="openAuditor('sampling')" class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             Start 10-Min Viva <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 <div class="p-space-md bg-canvas-slate rounded border border-border-subtle flex flex-col justify-between">
 <div class="flex flex-col gap-1">
@@ -201,9 +201,9 @@ export const homeHtmlNew = `
 <p class="font-title-md text-title-md text-on-surface">Competency Credentials</p>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Download official certificates validated by National Statistical Systems Training Academy (NSSTA).</p>
 </div>
-<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold">
+<button onclick="openCert('registry')" class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-3 font-semibold hover:underline">
             Access 2 Badges Earned <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</span>
+</button>
 </div>
 </div>
 </section>
@@ -443,10 +443,10 @@ export const homeHtmlNew = `
 <p class="font-body-sm text-body-sm text-on-surface-variant">Live surveillance of ongoing national training programs across zonal headquarters</p>
 </div>
 <div class="flex items-center gap-2">
-<button class="px-3 py-1.5 bg-canvas-slate border border-border-subtle hover:border-border-strong rounded font-label-sm text-label-sm text-on-surface flex items-center gap-1.5">
+<button onclick="toggleCohortFilter()" class="px-3 py-1.5 bg-canvas-slate border border-border-subtle hover:border-border-strong rounded font-label-sm text-label-sm text-on-surface flex items-center gap-1.5">
 <span class="material-symbols-outlined text-[16px]">filter_list</span> Filter Matrix
             </button>
-<button class="px-3 py-1.5 bg-primary-container text-on-primary rounded font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-surface-dim">
+<button onclick="enrollCadre()" class="px-3 py-1.5 bg-primary-container text-on-primary rounded font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-surface-dim">
 <span class="material-symbols-outlined text-[16px]">add</span> Enroll New Cadre
             </button>
 </div>
@@ -496,7 +496,7 @@ export const homeHtmlNew = `
 <button class="px-2.5 py-1 text-xs font-semibold rounded bg-canvas-slate border border-border-strong hover:bg-surface-pure text-on-surface" onclick="triggerAction('Reviewing Assessment for ISS-2025-NZ')">
                       Review Assessment
                     </button>
-<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="triggerAction('Certificate Verified &amp; Ready for ISS-2025-NZ')">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="openCert('issue', 'ISS-2025-NZ')">
                       Issue Certificate
                     </button>
 </div>
@@ -534,7 +534,7 @@ export const homeHtmlNew = `
 <button class="px-2.5 py-1 text-xs font-semibold rounded bg-canvas-slate border border-border-strong hover:bg-surface-pure text-on-surface" onclick="triggerAction('Reviewing Assessment for NSSO-FOD-SZ')">
                       Review Assessment
                     </button>
-<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="triggerAction('All Certificates Dispatched for NSSO-FOD-SZ')">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="openCert('issue', 'NSSO-FOD-SZ')">
                       Issue Certificate
                     </button>
 </div>
@@ -610,7 +610,7 @@ export const homeHtmlNew = `
 <button class="px-2.5 py-1 text-xs font-semibold rounded bg-canvas-slate border border-border-strong hover:bg-surface-pure text-on-surface" onclick="triggerAction('Reviewing Assessment for EPFO-GSTN-AI')">
                       Review Assessment
                     </button>
-<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="triggerAction('Certificates Issued to 65 Engineers')">
+<button class="px-2.5 py-1 text-xs font-semibold rounded bg-on-tertiary-container hover:bg-teal-accent text-on-primary" onclick="openCert('issue', 'EPFO-GSTN-AI')">
                       Issue Certificate
                     </button>
 </div>

@@ -13,7 +13,7 @@ const LANGS = [
 
 export default function Header() {
   const { user, logout } = useAuth();
-  const { theme, toggleTheme, language, setLanguage, t } = useSettings();
+  const { theme, toggleTheme, language, setLanguage, capiMode, toggleCapiMode, t } = useSettings();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [online, setOnline] = useState(navigator.onLine !== false);
   const location = useLocation();
@@ -47,15 +47,34 @@ export default function Header() {
             <span className="font-semibold tracking-wider uppercase text-label-sm">Government of India · MoSPI</span>
             <span className="hidden sm:inline text-label-sm opacity-70">(Prototype · SIH26101)</span>
           </div>
-          <div className={`flex items-center space-x-1.5 font-semibold ${online ? 'text-on-tertiary-container' : 'text-amber-600'}`}>
-            <span className="relative flex h-1.5 w-1.5">
-              {online && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-accent opacity-75"></span>}
-              <span className={`relative inline-flex rounded-full h-1.5 w-1.5 ${online ? 'bg-teal-accent' : 'bg-amber-500'}`}></span>
-            </span>
-            <span className="tracking-tight text-label-sm">{online ? 'System Online' : t('offlineMode')}</span>
+          <div className="flex items-center gap-4">
+            <button onClick={toggleCapiMode} className={`flex items-center gap-1.5 font-semibold transition ${capiMode ? 'text-amber-600' : 'text-on-surface-variant hover:text-on-tertiary-container'}`} title="Simulate a field district with no network connectivity">
+              <span className={`relative inline-flex w-6 h-3.5 rounded-full transition ${capiMode ? 'bg-amber-500' : 'bg-slate-300'}`}>
+                <span className={`absolute top-0.5 w-2.5 h-2.5 rounded-full bg-white shadow transition-all ${capiMode ? 'left-3' : 'left-0.5'}`}></span>
+              </span>
+              <span className="hidden sm:inline tracking-tight text-label-sm">Simulate Offline District Mode</span>
+              <span className="sm:hidden tracking-tight text-label-sm">CAPI Mode</span>
+            </button>
+            <div className={`flex items-center space-x-1.5 font-semibold ${online ? 'text-on-tertiary-container' : 'text-amber-600'}`}>
+              <span className="relative flex h-1.5 w-1.5">
+                {online && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-accent opacity-75"></span>}
+                <span className={`relative inline-flex rounded-full h-1.5 w-1.5 ${online ? 'bg-teal-accent' : 'bg-amber-500'}`}></span>
+              </span>
+              <span className="tracking-tight text-label-sm">{capiMode ? 'District Edge · Offline' : online ? 'System Online' : t('offlineMode')}</span>
+            </div>
           </div>
         </div>
       </div>
+      {capiMode && (
+        <div className="w-full bg-amber-50 border-b border-amber-200 text-amber-900 px-4 sm:px-6 lg:px-8 py-1.5">
+          <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-x-5 gap-y-1 text-[10px] font-semibold">
+            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[13px]">inventory_2</span> 12 micro-modules compressed · 4.8 MB</span>
+            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[13px]">gps_fixed</span> Geo-tagged survey polygons validated</span>
+            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[13px]">lock</span> Encrypted local queue · 18 records pending</span>
+            <Link to="/offline" className="ml-auto underline hover:no-underline">Open CAPI Field Simulator →</Link>
+          </div>
+        </div>
+      )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-16 flex flex-wrap items-center justify-between gap-x-space-md gap-y-0 py-2">
         <Link to="/" className="flex items-center gap-space-sm group flex-shrink-0">
           <div className="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-xs">

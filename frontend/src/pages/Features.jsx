@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 import { useSettings } from '../context/SettingsContext.jsx';
 
 const features = [
-  ['Competency Gap Analysis', 'Radar view of 8 core statistical skills against role benchmarks.'],
-  ['AI Chat Assistant', 'A tutor trained on MoSPI manuals that answers in plain language.'],
-  ['Personalized Courses', 'Learning paths that adapt to your gaps and the tasks ahead.'],
-  ['Interactive MCQ Quizzes', 'Timed quizzes with instant scoring and explanations.'],
-  ['Offline Downloads', 'Full access to manuals and micro-courses for field visits with no network.'],
-  ['Learning Library', 'Searchable manuals, codes, schedules, and past NSSO surveys.'],
-  ['Progress Tracking', 'Longitudinal score trends and completion milestones at a glance.'],
-  ['Task Readiness', 'Know if you are ready for a real assignment and what to learn first.'],
+  ['Live Microdata Sandbox', 'Clean a dirty PLFS or CPI extract with winsorization, GVF imputation and weight calibration — then watch variance and bias telemetry move.'],
+  ['Methodology & Policy Auditor', 'Run UNSC, SNA 2008 and MoSPI TAG rule checks on a sampling plan or re-basing formula, with inline citations and one-click compliant fixes.'],
+  ['Tamper-Proof Cert Ledger', 'SHA-256 signed credentials, verifiable token registry and live officer-readiness checks before sign-off on state-level datasets.'],
+  ['CAPI Edge Sync Simulator', 'Rehearse an offline district visit with compressed micro-modules, geo-tagged polygon validation and an encrypted sync queue.'],
+  ['Competency Gap Analysis', 'Radar view of eight governance competencies against MoSPI role benchmarks — not passive course completion.'],
+  ['Pre-Deployment Gatekeeper', 'Simulation results decide whether an officer is cleared for live national datasets. Bias is stopped before it enters the estimate.'],
+  ['Governance Document Library', 'RAG over official manuals, NSS schedules and TAG guidance, with plain-text offline copies for field use.'],
+  ['Bias Incident Telemetry', 'Longitudinal variance-error and compliance trends across cadres, zonal HQs and assessment cohorts.'],
 ];
 
 export default function Features() {
   const { t } = useSettings();
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-extrabold text-slate-900 font-display mb-8">{t('featuresTitle')}</h1>
+      <h1 className="text-3xl font-extrabold text-slate-900 font-display mb-2">{t('featuresTitle')}</h1>
+      <p className="text-sm text-slate-500 mb-8 max-w-3xl">Operational governance infrastructure for the National Statistical System — simulation, audit and accreditation, not passive learning.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map(([t, d]) => (
           <div key={t} className="bg-white rounded-3xl p-6 border border-slate-100 card-soft-shadow">

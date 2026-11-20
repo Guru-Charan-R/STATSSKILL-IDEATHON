@@ -18,6 +18,7 @@ const dict = {
 export function SettingsProvider({ children }) {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'en');
+  const [capiMode, setCapiMode] = useState(() => localStorage.getItem('capiMode') === 'true');
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
@@ -28,10 +29,15 @@ export function SettingsProvider({ children }) {
     localStorage.setItem('language', language);
   }, [language]);
 
+  useEffect(() => {
+    localStorage.setItem('capiMode', String(capiMode));
+  }, [capiMode]);
+
   const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
+  const toggleCapiMode = () => setCapiMode(v => !v);
   const t = (key) => (dict[language] && dict[language][key]) || dict.en[key] || key;
 
-  return <SettingsContext.Provider value={{ theme, setTheme, toggleTheme, language, setLanguage, t }}>{children}</SettingsContext.Provider>;
+  return <SettingsContext.Provider value={{ theme, setTheme, toggleTheme, language, setLanguage, capiMode, setCapiMode, toggleCapiMode, t }}>{children}</SettingsContext.Provider>;
 }
 
 export function useSettings() { return useContext(SettingsContext); }
