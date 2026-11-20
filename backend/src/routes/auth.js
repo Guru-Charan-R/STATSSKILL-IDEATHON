@@ -33,8 +33,12 @@ router.post('/login', (req, res) => {
 
 router.get('/me', authRequired, (req, res) => {
   const user = db.prepare('SELECT id,name,email,role,department,region,designation,batch_id FROM users WHERE id=?').get(req.user.id);
-  if (!user) return res.status(404).json({ error: 'User not found' });
-  res.json({ user });
+  if (user) return res.json({ user });
+  // On serverless each lambda instance has its own temporary SQLite DB, so a
+  // freshly registered user may not exist on the instance handling this request.
+  // The signed token is authoritative — rebuild the session from its payload.
+  const { id, name, email, role } = req.user;
+  res.json({ user: { id, name, email, role, department: null, region: null, designation: null, batch_id: null } });
 });
 
 router.post('/forgot-password', (req, res) => {
